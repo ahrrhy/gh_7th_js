@@ -3,86 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!--<script src="js/main.js"></script>-->
+    <script src="js/main.js"></script>
 </head>
 <body>
-<script>
-//    //Sets up the counter (1-100 right now)
-//    var rec = function recu (n) {
-//        for (var counter = 1; counter <= n; counter++) { //Creates a variable called not_prime and automatically sets it to false for each of the counter numbers
-//            var not_prime = false; //Creates a for loop with a variable called div. The loop increases by one each time until it gets to one less than the counter.
-//            for (var div = 2; div <= (counter - 1); div++) { //If the current number divided by the "div"ider number has a remainder of 0, then it's not a prime number and not_prime is set to true.
-//
-//                if (counter % div === 0) {
-//                    not_prime = true;
-//                }
-//            } //If after going through all the numbers between 2 and one less than the number and none of them were evenly divided (no remainder) not_prime will still be false and the console will print the number.
-//            if (not_prime === false) {
-//                console.log(counter);
-//            }
-//        }
-//    };
-//    rec(100);
-function recursion(x,z){
 
-    if (x<2){
-        return false;
-    }else if(x==2){
-        return true;
-    }else if (x%z==0){
-        return false;
-    }else if (z<x/2){
-        console.log(x);
-        return recursion(x-1,z+1);
-
-    }else{
-        return true;
-    }
-}
-console.log(recursion(7,2));
-var arr = [];
-function prime(n) {
-    for(var i = 2; i <= n; ++i) {
-
-        for(var j = 2; j < i; ++j) {
-
-            if(i%j == 0) break;
-        }
-
-        if(i == j){
-
-            arr.push(i);
-        }
-
-    }
-    console.log(arr);
-}
-prime(50);
-//var list = [];
-var myRec = function recMy(num) {
-    if (num ==2){
-        return alert(2);
-    }
-    console.log(num);
-    return recMy(num-1);
-};
-console.log(myRec(8));
-//function primeList(N) {
-//    var i = 1;
-//    while (i != N){
-//        ++i;
-//        if (isPrime(i)) list.push(i);
-//    }
-//    function isPrime(i) {
-//        for (var c = 2; c <= Math.sqrt(i); ++c)
-//            if (i % c === 0) return false;
-//        return true;
-//    }
-//    return list;
-//}
-//primeList(50);
-//console.log(list);
-
-</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-//task number 2
+// //task number 2
 
 
 var someOblect = {
@@ -29,7 +29,7 @@ newObj.propp1="fed";
 console.log(newObj);
 
 
-//task number 3
+// //task number 3
 
 
 function arrGenerate(n) {
@@ -100,3 +100,29 @@ console.time('randObj');
 benchmarkArr(objRand);
 console.timeEnd('randObj');
 
+
+
+
+
+//************Task 1***************//
+var list = [];
+function primeList(N) {
+    function isPrime(i) {
+        for (var c = 2; c <= Math.sqrt(i); ++c)
+            if (i % c === 0) {
+                return false;
+            }
+        return i;
+    }
+    if (N<=2){
+        return false;
+    }
+    if (isPrime(N)){
+        list.push(N);
+    }
+        primeList(N-1);
+
+
+}
+primeList(50);
+console.log(list);
