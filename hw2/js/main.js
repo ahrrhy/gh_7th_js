@@ -1,22 +1,41 @@
 // getting data from form
-function getFormData () {
-    
-}
+document.addEventListener('DOMContentLoaded', function(){
 
+    //stop submiting form
+
+    var createUserForm = document.getElementById("createUserForm");
+    createUserForm.addEventListener('submit', function(e){
+
+        e.preventDefault();
+
+
+        function UserBirthday () {
+        var birthYear = document.getElementById("birthYear").value,
+            birthMonth = document.getElementById("birthMonth").value,
+            birthDay = document.getElementById("birthDay").value;
+            return new Date(birthYear, birthMonth, birthDay);
+        }
+        
+    })
+    
+});
+
+
+
+//console.log(UserBirthday());
 
 
 //Create the User constructor
 
-function User(fullName, birthday) {
+function User (fullName, birthday) {
     User.count++;
     this.id = User.count;
     this.fullName = fullName;
-    this.age = age;
     this.birthday;
 
     // this descriptor gets value from birthday and defines User's age
-      Object.defineProperty(this, "age", {
-        get: function() {
+      Object.defineProperty (this, "age", {
+        get: function () {
           var todayYear = new Date().getFullYear();
           return todayYear - this.birthday.getFullYear();
         }
@@ -27,7 +46,7 @@ function User(fullName, birthday) {
     this.valueOf = function () { // Number Value
       return this.id;
     };
-    this.toString =function(){ // String Value
+    this.toString =function () { // String Value
         return this.fullName;
     };
     this.toJSON = function () {
