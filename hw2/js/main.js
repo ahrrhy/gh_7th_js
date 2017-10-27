@@ -16,34 +16,33 @@ document.addEventListener('DOMContentLoaded', function(){ //eventListener works 
         }
         console.log(UserDayOfBirth()); //debug
 
+        var name = function () {
+            return name = document.getElementById("name").value
+        };
 
         //Create the User constructor
 
-        function User (fullName, UserDayOfBirth) {
+        function User () {
             User.count++; // static property which will count the number of User's instances
             this.id = User.count; // User id
-            this.fullName = fullName; // User's fullName
-            this.dayOfBirth = UserDayOfBirth; // User's date of birth
 
             // this descriptor gets value from dayOfBirth and defines User's age
-              Object.defineProperty (this, "age", { // descriptor makes new User's property - User.age
-                  get: function () {
-                      var todayYear = new Date().getFullYear();
-                      return todayYear - this.dayOfBirth.getFullYear(); // descriptor get returns age value
+            Object.defineProperty (user, "age", { // descriptor makes new User's property - User.age
+                get: function () {
+                    var todayYear = new Date().getFullYear();
+                    return todayYear - this.dayOfBirth.getFullYear(); // descriptor get returns age value
                 }
-              });
+            });
             // this descriptor gets value from dayOfBirth and defines User's birthday
-              Object.defineProperty(this, "birthday", {
-                  get: function () {
-                      return this.dayOfBirth.toISOString().split('T')[0].slice(-5);
-                  }
-              });
-
-
+            Object.defineProperty(user, "birthday", {
+                get: function () {
+                    return this.dayOfBirth.toISOString().split('T')[0].slice(-5);
+                }
+            });
 
             // these will return the value methods
             this.valueOf = function () { // Number Value
-              return this.id;
+                return this.id;
             };
             this.toString =function () { // String Value
                 return this.fullName;
@@ -53,12 +52,28 @@ document.addEventListener('DOMContentLoaded', function(){ //eventListener works 
             };
 
             Object.defineProperties(this, {
-                valueOf : {enumerable: false},
-                toString : {enumerable: false},
-                toJSON : {enumerable: false}
+                    valueOf : {enumerable: false},
+                    toString : {enumerable: false},
+                    toJSON : {enumerable: false}
                 }
             );
         }
+
+        User.createFromForm = function (name, UserDayOfBirth) {
+
+            var user = new User; // create new instance of User
+            user.fullName = name; // User's fullName
+            user.dayOfBirth = UserDayOfBirth; // User's date of birth
+        };
+
+        User.createEmpty = function () {
+          var user = new User;
+
+          user.fullName = 'Hobbit';
+          user.dayOfBirth = new Date;
+
+        };
+
         User.count = 0; // starts User.count
 
 
