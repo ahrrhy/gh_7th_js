@@ -1,24 +1,24 @@
 // getting data from form
-document.addEventListener('DOMContentLoaded', function(){ //eventListener works when page is loaded
+document.addEventListener('DOMContentLoaded', function(){ // eventListener works when page is loaded
 
-    var createUserForm = document.getElementById("createUserForm"); //get the var from Form
-    createUserForm.addEventListener('submit', function(e){ //make eventListener that works on form submit
+    var createUserForm = document.getElementById("createUserForm"); // get the var from Form
+    createUserForm.addEventListener('submit', function(e){ // make eventListener that works on form submit
 
-        e.preventDefault();//stop submit form
-
+        e.preventDefault(); // stop submit form
+      
         // taking data from userForm and make UserBirthday
 
         function UserDayOfBirth () {
             var birthYear = document.getElementById("birthYear").value, //get birthYear input value
                 birthMonth = document.getElementById("birthMonth").value, //get birthMonth input value
                 birthDay = document.getElementById("birthDay").value; //get birthDay input value
-                return new Date(birthYear, birthMonth, birthDay);
+                return new Date(birthYear, birthMonth-1, birthDay);
         }
-        console.log(UserDayOfBirth()); //debug
+        //console.log(UserDayOfBirth()); //debug
 
-        var name = function () {
-            return name = document.getElementById("name").value
-        };
+        function nameUser () {
+            return nameUser = document.getElementById("name").value
+        }
 
         //Create the User constructor
 
@@ -27,16 +27,17 @@ document.addEventListener('DOMContentLoaded', function(){ //eventListener works 
             this.id = User.count; // User id
 
             // this descriptor gets value from dayOfBirth and defines User's age
-            Object.defineProperty (user, "age", { // descriptor makes new User's property - User.age
+
+            Object.defineProperty (this, "age", { // descriptor makes new User's property - User.age
                 get: function () {
                     var todayYear = new Date().getFullYear();
                     return todayYear - this.dayOfBirth.getFullYear(); // descriptor get returns age value
                 }
             });
             // this descriptor gets value from dayOfBirth and defines User's birthday
-            Object.defineProperty(user, "birthday", {
+            Object.defineProperty(this, "birthday", {
                 get: function () {
-                    return this.dayOfBirth.toISOString().split('T')[0].slice(-5);
+                    return this.dayOfBirth.toLocaleString().split(',')[0].slice(0, 5);
                 }
             });
 
@@ -59,32 +60,34 @@ document.addEventListener('DOMContentLoaded', function(){ //eventListener works 
             );
         }
 
-        User.createFromForm = function (name, UserDayOfBirth) {
+        User.createFromForm = function (name, UserDayOfBirth) { // fabric method which will create a known user
 
             var user = new User; // create new instance of User
             user.fullName = name; // User's fullName
             user.dayOfBirth = UserDayOfBirth; // User's date of birth
+
+            return user;
         };
 
-        User.createEmpty = function () {
+        User.createEmpty = function () { // fabric method which will create an unknown user
           var user = new User;
 
           user.fullName = 'Hobbit';
           user.dayOfBirth = new Date;
 
+            return user;
         };
 
         User.count = 0; // starts User.count
 
-
-
-        var vasia = new User ('vasia piatkin', UserDayOfBirth());
+        var vasia = User.createFromForm( nameUser(), UserDayOfBirth());
+        console.log(vasia.fullName);
         console.log(vasia.id);
         console.log(vasia.dayOfBirth);
         console.log(vasia.birthday);
-            });
 
 
+    });
 });
 
 
