@@ -1,39 +1,44 @@
 // getting data from form
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function(){ //eventListener works when page is loaded
 
-    //stop submiting form
+    var createUserForm = document.getElementById("createUserForm"); //get the var from Form
+    createUserForm.addEventListener('submit', function(e){ //make eventListener that works on form submit
 
-    var createUserForm = document.getElementById("createUserForm");
-    createUserForm.addEventListener('submit', function(e){
+        e.preventDefault();//stop submit form
 
-        e.preventDefault();
+        // taking data from userForm and make UserBirthday
 
-
-            // taking data from userForm and make UserBirthday
-        function UserBirthday () {
-        var birthYear = document.getElementById("birthYear").value,
-            birthMonth = document.getElementById("birthMonth").value,
-            birthDay = document.getElementById("birthDay").value;
-            return new Date(birthYear, birthMonth, birthDay);
+        function UserDayOfBirth () {
+            var birthYear = document.getElementById("birthYear").value, //get birthYear input value
+                birthMonth = document.getElementById("birthMonth").value, //get birthMonth input value
+                birthDay = document.getElementById("birthDay").value; //get birthDay input value
+                return new Date(birthYear, birthMonth, birthDay);
         }
-        console.log(UserBirthday());
+        console.log(UserDayOfBirth()); //debug
 
 
         //Create the User constructor
 
-        function User (fullName, UserBirthday) {
-            User.count++;
-            this.id = User.count;
-            this.fullName = fullName;
-            this.birthday;
+        function User (fullName, UserDayOfBirth) {
+            User.count++; // static property which will count the number of User's instances
+            this.id = User.count; // User id
+            this.fullName = fullName; // User's fullName
+            this.dayOfBirth = UserDayOfBirth; // User's date of birth
 
-            // this descriptor gets value from birthday and defines User's age
-              Object.defineProperty (this, "age", {
-                get: function () {
-                  var todayYear = new Date().getFullYear();
-                  return todayYear - this.birthday.getFullYear();
+            // this descriptor gets value from dayOfBirth and defines User's age
+              Object.defineProperty (this, "age", { // descriptor makes new User's property - User.age
+                  get: function () {
+                      var todayYear = new Date().getFullYear();
+                      return todayYear - this.dayOfBirth.getFullYear(); // descriptor get returns age value
                 }
               });
+            // this descriptor gets value from dayOfBirth and defines User's birthday
+              Object.defineProperty(this, "birthday", {
+                  get: function () {
+                      return this.dayOfBirth.toISOString().split('T')[0].slice(-5);
+                  }
+              });
+
 
 
             // these will return the value methods
@@ -45,31 +50,26 @@ document.addEventListener('DOMContentLoaded', function(){
             };
             this.toJSON = function () {
                 return [this.id, this.fullName, this.age, this.birthday];
-            }
+            };
+
+            Object.defineProperties(this, {
+                valueOf : {enumerable: false},
+                toString : {enumerable: false},
+                toJSON : {enumerable: false}
+                }
+            );
         }
-        User.count = 0;
+        User.count = 0; // starts User.count
+
+
+
+        var vasia = new User ('vasia piatkin', UserDayOfBirth());
+        console.log(vasia.id);
+        console.log(vasia.dayOfBirth);
+        console.log(vasia.birthday);
             });
-            
-        });
 
 
+});
 
 
-    // DEBAGS
-// var vasya = new User("Василий Попкин");
-// //console.log(vasya);
-// console.log(vasya + ' a');
-
-// var igor = new User('Igor Kulev');
-// //console.log(misha);
-// console.log(igor + ' a');
-// console.log(Number(igor));
-// console.log(String(igor));
-// console.log(JSON.stringify(igor));
-
-// // trying Date;
-// function showDate(a, b, c){
-// 	var birthDate = new Date(a, b, c);
-// 	console.log(birthDate);
-// }
-// showDate(1990,8,8);
