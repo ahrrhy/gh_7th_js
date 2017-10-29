@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
                 var knownUser = User.createFromForm(nameUser(), UserDayOfBirth());
                 users.push(knownUser);
                 console.log(users);
+
             }else{
                 var unknownUser = User.createEmpty();
                 users.push(unknownUser);
                 console.log(users);
             }
-            
     // DEBUGERS
             // var vasia = User.createFromForm( nameUser(), UserDayOfBirth());
             // console.log(vasia.fullName);
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
     // taking data from form
 
     function nameUser () {
-        return nameUser = document.getElementById("name").value
+        return document.getElementById("name").value
     }
 
     //Create the User constructor
