@@ -7,18 +7,19 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<form method="post" action="index.html" id="createUserForm">
-	<fieldset>
-		
-	<legend>Create New User</legend>
-		<ul>
-			<li><input type="text" name="name" placeholder="Firstname Lastname" id="name"></li>
-			<li><input type="number" name="birthYear" placeholder="1970" id="birthYear" min="1970" max="1999"></li>
-			<li><input type="number" name="birthMonth" placeholder="01-12" min="1" max="12" id="birthMonth"></li>
-			<li><input type="number" name="birthDay" placeholder="01-31" min="1" max="31" id="birthDay"></li>
-			<li><input type="submit" name="createUserSubmit" id="createUserSubmit" value="create"></li>
-		</ul>
-	</fieldset>
-</form>
+	<form method="post" action="index.html" id="createUserForm">
+		<fieldset>
+
+		<legend>Create New User</legend>
+			<ul>
+				<li><input type="text" name="name" placeholder="Firstname Lastname" id="name"></li>
+				<li><input type="number" name="birthYear" placeholder="1970" id="birthYear" min="1970" max="1999"></li>
+				<li><input type="number" name="birthMonth" placeholder="01-12" min="1" max="12" id="birthMonth"></li>
+				<li><input type="number" name="birthDay" placeholder="01-31" min="1" max="31" id="birthDay"></li>
+				<li><input type="submit" name="createUserSubmit" id="createUserSubmit" value="create"></li>
+			</ul>
+		</fieldset>
+	</form>
+	<p><button id="showBtn" type="button">Show registered users</button></p>
 </body>
 </html>

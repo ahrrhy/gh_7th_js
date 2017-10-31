@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function(){ // eventListener works when page is loaded
 
     var users = [];
+
     var createUserForm = document.getElementById("createUserForm"),
         createBtn = document.getElementById("createUserSubmit"); // get the var from Form
     createUserForm.addEventListener('submit', function(e){ // make eventListener that works on form submit
@@ -13,21 +14,11 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
                 var knownUser = User.createFromForm(nameUser(), UserDayOfBirth());
                 users.push(knownUser);
                 console.log(users);
-
             }else{
                 var unknownUser = User.createEmpty();
                 users.push(unknownUser);
                 console.log(users);
             }
-    // DEBUGERS
-            // var vasia = User.createFromForm( nameUser(), UserDayOfBirth());
-            // console.log(vasia.fullName);
-            // console.log(vasia.id);
-            // console.log(vasia.dayOfBirth);
-            // console.log(vasia.birthday);
-            // console.log(vasia +6);
-            // console.log(vasia +'f');
-            // console.log(JSON.stringify(vasia));
             return users;
         });
 
@@ -38,8 +29,6 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
             birthDay = document.getElementById("birthDay").value; //get birthDay input value
             return new Date(birthYear, birthMonth-1, birthDay);
     }
-    //console.log(UserDayOfBirth()); //debug
-
     // taking data from form
 
     function nameUser () {
@@ -102,8 +91,22 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
 
     return user;
     };
+    User.count = 0; //starts User.count
 
-    User.count = 0; // starts User.count
+    function takeNames (arr) {
+        var namedUsers = [];
+        for (var i = 0; i < arr.length; i++) {
+            namedUsers.push(arr[i].fullName);
+        }
+        return namedUsers;
+    }
+
+    var showBtn = document.getElementById('showBtn');
+    showBtn.addEventListener('click', function () {
+        var userNames = takeNames(users);
+        console.log(userNames);
+    });
+
 
 });
 

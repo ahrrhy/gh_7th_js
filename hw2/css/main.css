@@ -1,5 +1,9 @@
+body{
+	text-align: center;
+}
 #createUserForm{
 	text-align: center;
+	display: inline-block;
 }
 legend{
 	margin: 15px 0 0;
