@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
     };
     User.count = 0; //starts User.count
 
+// this will get names from users array and put it to new array
     function takeNames (arr) {
         var namedUsers = [];
         for (var i = 0; i < arr.length; i++) {
@@ -101,10 +102,32 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
         return namedUsers;
     }
 
+    function displayUserData(namesArr, dataArr){
+        
+        for (var i = 0; i < namesArr.length; i++) {
+            var userDataWrap = document.createElement('div'),
+            dataWrapHeading = document.createElement('h3');
+            document.body.appendChild(userDataWrap);
+            userDataWrap.appendChild(dataWrapHeading);
+            dataWrapHeading.innerHTML = namesArr[i];
+            for (prop in dataArr[i]){
+                var spanPropName = document.createElement('span'),
+                    spanPropVal = document.createElement('span');
+                userDataWrap.appendChild(spanPropName);
+                userDataWrap.appendChild(spanPropVal);
+                spanPropName.innerHTML = prop;
+            }
+        }
+    }
+    
+    // event on clicking showBtn
     var showBtn = document.getElementById('showBtn');
     showBtn.addEventListener('click', function () {
-        var userNames = takeNames(users);
+        var userNames = takeNames(users); // getting users and return user's names
+        //debug
         console.log(userNames);
+        console.log(users);
+        displayUserData(userNames, users);
     });
 
 
