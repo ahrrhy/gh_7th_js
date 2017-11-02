@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
 
         // this descriptor gets value from dayOfBirth and defines User's age
 
-        Object.defineProperty (this, "age", { // descriptor makes new User's property - User.age
+        Object.defineProperty (this, "age", {// descriptor makes new User's property - User.age
+            enumerable: true,
             get: function () {
                 var todayYear = new Date().getFullYear();
                 return todayYear - this.dayOfBirth.getFullYear(); // descriptor get returns age value
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
         });
         // this descriptor gets value from dayOfBirth and defines User's birthday
         Object.defineProperty(this, "birthday", {
+            enumerable: true,
             get: function () {
                 return this.dayOfBirth.toLocaleString().split(',')[0].slice(0, 5);
             }
@@ -79,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
 
         var user = new User; // create new instance of User
         user.fullName = name; // User's fullName
-        user.dayOfBirth = UserDayOfBirth; // User's date of birth  
+        user.dayOfBirth = UserDayOfBirth; // User's date of birth
 
         return user;
     };
@@ -110,12 +112,13 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
             document.body.appendChild(userDataWrap);
             userDataWrap.appendChild(dataWrapHeading);
             dataWrapHeading.innerHTML = namesArr[i];
-            for (prop in dataArr[i]){
+            for (var prop in dataArr[i]){
                 var spanPropName = document.createElement('span'),
                     spanPropVal = document.createElement('span');
                 userDataWrap.appendChild(spanPropName);
                 userDataWrap.appendChild(spanPropVal);
-                spanPropName.innerHTML = prop;
+                spanPropName.innerHTML = prop + " ";
+                spanPropVal.innerHTML = dataArr[i][prop] + " ";
             }
         }
     }
