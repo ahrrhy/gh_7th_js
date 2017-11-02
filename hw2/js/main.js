@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
         );
     }
 
-    User.createFromForm = function (name, UserDayOfBirth) { // fabric method which will create a known user
+    User.createFromForm = function(name, UserDayOfBirth) { // fabric method which will create a known user
 
         var user = new User; // create new instance of User
         user.fullName = name; // User's fullName
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
         return user;
     };
 
-    User.createEmpty = function () { // fabric method which will create an unknown user
+    User.createEmpty = function() { // fabric method which will create an unknown user
         var user = new User;
             user.fullName = 'Hobbit';
             user.dayOfBirth = new Date;
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
     User.count = 0; //starts User.count
 
 // this will get names from users array and put it to new array
-    function takeNames (arr) {
+    function takeNames(arr) {
         var namedUsers = [];
         for (var i = 0; i < arr.length; i++) {
             namedUsers.push(arr[i].fullName);
@@ -104,15 +104,15 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
         return namedUsers;
     }
 
-    function displayUserData(namesArr, dataArr){
-        
-        for (var i = 0; i < namesArr.length; i++) {
+    function displayUserData(namesArr, dataArr) {//namesArr - array with strings names, dataArr - array with User objects
+
+        for (var i = 0; i < namesArr.length; i++) { //while we have names we will create dom elements
             var userDataWrap = document.createElement('div'),
             dataWrapHeading = document.createElement('h3');
             document.body.appendChild(userDataWrap);
             userDataWrap.appendChild(dataWrapHeading);
             dataWrapHeading.innerHTML = namesArr[i];
-            for (var prop in dataArr[i]){
+            for (var prop in dataArr[i]){ //finds all propertie's names in User and creates and appends dom elements in to dataWrap
                 var spanPropName = document.createElement('span'),
                     spanPropVal = document.createElement('span');
                 userDataWrap.appendChild(spanPropName);
@@ -122,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
             }
         }
     }
-    
     // event on clicking showBtn
     var showBtn = document.getElementById('showBtn');
     showBtn.addEventListener('click', function () {
@@ -132,8 +131,40 @@ document.addEventListener('DOMContentLoaded', function(){ // eventListener works
         console.log(users);
         displayUserData(userNames, users);
     });
-
-
 });
 
+function saySomeWords() {
+    var sentence = "";
+    for (var i = 0; i<arguments.length; i++){
+        sentence += arguments[i] + " ";
+    }
+    return sentence;
+}
 
+
+function checkTypeDecorator(fn, args) {
+    return function () {
+        var sentece = 'The sentence consist of ',
+            type = '';
+        for (var i = 0; i < arguments.length; i++) {
+           type += typeof arguments[i] + ' ';
+        }
+        console.log(sentece + type);
+        return fn.apply(this, arguments);
+    }
+}
+saySomeWords = checkTypeDecorator(saySomeWords);
+
+function makeArrArgs(fn, args) {
+    return function () {
+        var saySomeWordsArr = [];
+        for (var i = 0; i < arguments.length; i++) {
+            saySomeWordsArr.push(arguments[i]);
+        }
+        console.log(saySomeWordsArr);
+        return fn.apply(this, arguments);
+    }
+}
+saySomeWords = makeArrArgs(saySomeWords);
+
+console.log(saySomeWords('sdffd', 532, 'wrrw', 'wrtrfk'));
