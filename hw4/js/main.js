@@ -6,8 +6,31 @@
 // Animal <- Human <- Hunter
 // Animal <- Human <- Aborigine
 
-function Animal(name) {
-    this.health = 0;
-    this.speed = 0;
+
+// function toLive () {
+
+// }
+
+function Animal(name, health, stamina) {
+	var animal = this;
+	// animal properties
+    animal.health = health;
+    animal.speed = 0;
+    animal.stamina = stamina;
+    animal.age = 0;
+    animal.name = name;
+    function growig () {
+    	return age++;
+    }
+    // animal methods
+    animal.walk = function () {
+    	return animal.speed = 10;
+    }
+    animal.run = function () {
+    	return animal.speed = 30;
+    }
+    // this.sleep = function () {
+
+    // }
 
 }
