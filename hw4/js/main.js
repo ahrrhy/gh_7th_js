@@ -7,30 +7,50 @@
 // Animal <- Human <- Aborigine
 
 
-// function toLive () {
 
-// }
 
 function Animal(name, health, stamina) {
-	var animal = this;
+	//privite properties
+	var animal = this,
+		DAY = 500,
+		livingTime;
+
 	// animal properties
-    animal.health = health;
-    animal.speed = 0;
-    animal.stamina = stamina;
-    animal.age = 0;
-    animal.name = name;
-    function growig () {
-    	return age++;
+	this.age = 0;
+    this.health = health;
+    this.speed = 0;
+    this.stamina = stamina;
+    this.name = name;
+
+    //privite methods
+    function grows () {
+    	return animal.age++;
     }
+    this.doGrows = function () {
+    	livingTime = setInterval(function(){
+    		grows();
+   			console.log(animal.age);
+    	}, DAY);
+    	if (animal.age == 10) {
+    		clearInterval(livingTime);
+    	} 
+    }
+    
     // animal methods
-    animal.walk = function () {
+    this.walk = function () {
     	return animal.speed = 10;
     }
-    animal.run = function () {
+    this.run = function () {
     	return animal.speed = 30;
     }
-    // this.sleep = function () {
+    this.sleep = function () {
 
-    // }
+    }
 
 }
+var maus = new Animal ('Mickey', 50, 50);
+
+
+document.addEventListener('DOMContentLoaded', function () {
+	maus.doGrows();
+})
