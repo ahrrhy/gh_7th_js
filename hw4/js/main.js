@@ -12,11 +12,13 @@
 function Animal(name, health, stamina) {
 	//privite properties
 	var animal = this,
-		DAY = 500,
+		DAY = 1000,
+        age = 0,
+        maxAge = 50,
 		livingTime;
 
 	// animal properties
-	this.age = 0;
+
     this.health = health;
     this.speed = 0;
     this.stamina = stamina;
@@ -24,33 +26,40 @@ function Animal(name, health, stamina) {
 
     //privite methods
     function grows () {
-    	return animal.age++;
+        if (age === maxAge) {
+            clearInterval(livingTime);
+        }else {
+            age++;
+            console.log(age);
+        }
     }
-    this.doGrows = function () {
-    	livingTime = setInterval(function(){
-    		grows();
-   			console.log(animal.age);
-    	}, DAY);
-    	if (animal.age == 10) {
-    		clearInterval(livingTime);
-    	} 
+    function time() {
+        livingTime = setInterval(function () {
+            grows();
+        }, DAY);
     }
-    
+
+
     // animal methods
     this.walk = function () {
     	return animal.speed = 10;
-    }
+    };
     this.run = function () {
     	return animal.speed = 30;
-    }
+    };
     this.sleep = function () {
 
-    }
-
+    };
+    this.lives = function () {
+        time();
+    };
+    this.death = function () {
+        clearInterval(livingTime);
+    };
 }
 var maus = new Animal ('Mickey', 50, 50);
 
 
 document.addEventListener('DOMContentLoaded', function () {
-	maus.doGrows();
-})
+    maus.lives();
+});
