@@ -5,10 +5,17 @@
 // Animal <- Human
 // Animal <- Human <- Hunter
 // Animal <- Human <- Aborigine
-
-
-
-
+function Predator () {
+    var predator = this;
+    this.hunt = function (victim) {
+        predator.move();
+        if (predator.size() >= victim.size()){
+            victim.death();
+            predator.eat();
+            return predator.stamina += 20;
+        }
+    };
+}
 function Animal(name, health, stamina) {
     var reloadStamina = stamina,
         reloadHealth = health;
@@ -17,14 +24,14 @@ function Animal(name, health, stamina) {
 		DAY = 1000,
         age = 0,
         maxAge = 50,
-		livingTime;
-
+		livingTime,
+        animalSize,
+	    isAlive = true;
 	// animal properties
     this.health = health;
     this.speed = 0;
     this.stamina = stamina;
     this.name = name;
-
     //privite methods
     function fastMove () {
         return animal.speed = 30;
@@ -32,7 +39,10 @@ function Animal(name, health, stamina) {
     function grows () {
         if (age === maxAge) {
             animal.death();
-        }else {
+        } else if (animal.health <= 0){
+            animal.death();
+        }
+        else {
             age++;
             console.log(age);
             return age;
@@ -43,9 +53,13 @@ function Animal(name, health, stamina) {
             grows();
         }, DAY);
     }
-
-
     // animal methods
+    this.size = function (size) {
+        if (!arguments.length) {
+            return animalSize;
+        }
+        animalSize = size;
+    };
     this.move = function () {
         fastMove();
         animal.stamina -= animal.speed;
@@ -65,46 +79,106 @@ function Animal(name, health, stamina) {
     this.eat = function () {
         return animal.health = reloadHealth;
     };
-
-
     this.lives = function () {
         time();
     };
     this.death = function () {
         clearInterval(livingTime);
+        return isAlive = false;
     };
     this.getAge = function () {
         return age;
     };
+    this.getStatus = function () {
+        return isAlive;
+    };
 }
+//Animal <- Mouse
 function Mouse() {
     Animal.apply(this, arguments);
     this.say = 'pee-pee';
-
-    //rename parents methods to better reading;
 }
 var Mickey = new Mouse('Mickey', 100, 100);
 
+function Eagle () {
+    Animal.apply(this, arguments);
+    Predator.apply(this, arguments);
+    var eagle = this;
+    this.say = 'cruue';
+    this.height = 0;
+    //Make it fly
+    this.fly = function () {
+        return eagle.height = 30;
+    };
+    this.landed = function () {
+        return eagle.height = 0;
+    };
+    var animalMove = this.move();
+    this.move = function () {
+        eagle.fly();
+    };
+}
 
+var AngryBird = new Eagle('AngryBird', 100, 150);
+
+function Deer() {
+    Animal.apply(this, arguments);
+    var deer = this,
+        horns = {
+        size: '',
+        color: '',
+        branched: ''
+    };
+    this.say = 'moo';
+    this.horns = function (size, color, branched) {
+        horns.size = size;
+        horns.color = color;
+        horns.branched = branched;
+    };
+    this.showHorns = function () {
+        return horns;
+    }
+}
+var Bamby = new Deer('Bamby', 150, 200);
+
+function Human () {
+    Animal.apply(this, arguments);
+    var walksOnTwoLegs = true,
+        usesInstruments = true;
+    //and i even can't imagine what else i can use here
+    this.say = 'and i even can\'t imagine what else i can use here';
+}
+function Hunter(weapon) {
+    var hunter = this,
+        hasWeapon = !!weapon,
+        food;
+    this.feed = function (family) {
+       if (food) {
+           hunter.eat();
+           family.eat();
+       }
+    };
+    this.hunt = function (victim) {
+        hunter.move();
+        if (!weapon) {
+            if (hunter.size() >= victim.size()){
+                victim.death();
+                return food = true;
+            }
+        }else if (weapon) {
+            victim.death();
+            return food = true;
+        } else {
+            return food = false;
+        }
+    };
+}
 document.addEventListener('DOMContentLoaded', function () {
-    Mickey.lives();
-    console.log(Mickey.name);
-    Mickey.move();
-    console.log(Mickey.stamina);
-    console.log(Mickey.speed);
-    Mickey.stop();
-    console.log(Mickey.speed);
-    Mickey.move();
-    console.log(Mickey.stamina);
-    Mickey.move();
-    console.log(Mickey.stamina);
-    Mickey.move();
-    console.log(Mickey.stamina);
-    console.log(Mickey.health);
-    Mickey.move();
-    console.log(Mickey.stamina);
-    console.log(Mickey.health);
-    Mickey.eat();
-    console.log(Mickey.health);
-    console.log(Mickey.say);
+    //DEBUG
+    Bamby.size(10);
+    Bamby.horns(3, 'brown', true);
+    console.log( Bamby.showHorns());
+    console.log(Bamby.getStatus());
+    AngryBird.hunt(Bamby);
+    console.log(Bamby.getStatus());
 });
