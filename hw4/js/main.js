@@ -148,10 +148,14 @@ function Human () {
     //and i even can't imagine what else i can use here
     this.say = 'and i even can\'t imagine what else i can use here';
 }
-function Hunter(weapon) {
+function Hunter() {
+    Human.apply(this, arguments);
     var hunter = this,
-        hasWeapon = !!weapon,
         food;
+    this.hasWeapon = false;
+    this.showWeapon = function () {
+        return hunter.hasWeapon = true;
+    };
     this.feed = function (family) {
        if (food) {
            hunter.eat();
@@ -160,12 +164,12 @@ function Hunter(weapon) {
     };
     this.hunt = function (victim) {
         hunter.move();
-        if (!weapon) {
+        if (!hunter.hasWeapon) {
             if (hunter.size() >= victim.size()){
                 victim.death();
                 return food = true;
             }
-        }else if (weapon) {
+        }else if (hunter.hasWeapon) {
             victim.death();
             return food = true;
         } else {
@@ -173,12 +177,61 @@ function Hunter(weapon) {
         }
     };
 }
+function Aborigine() {
+    Human.apply(this, arguments);
+    var weapon,
+        aborigine = this;
+
+    this.makeFire = function () {
+        if (!arguments.length) {
+            return aborigine.stamina += 20;
+        }else {
+            for (var i = 0; i <arguments.length; i++) {
+                arguments[i].stamina += 20;
+            }
+            return aborigine.stamina += 20;
+        }
+    };
+    this.makeWeapon = function () {
+        return weapon = true;
+    };
+    this.giveWeapon = function (hunter) {
+        if (weapon) {
+            return hunter.hasWeapon = true;
+        }
+    };
+}
+var ChuckNorris = new Hunter('Chuck Norris', 200, 200);
+var JimCarrey = new Aborigine('Jim Carrey', 150, 150);
 document.addEventListener('DOMContentLoaded', function () {
     //DEBUG
-    Bamby.size(10);
-    Bamby.horns(3, 'brown', true);
-    console.log( Bamby.showHorns());
+    // Bamby.size(10);
+    // Bamby.horns(3, 'brown', true);
+    // console.log( Bamby.showHorns());
+    // console.log(Bamby.getStatus());
+    // AngryBird.hunt(Bamby);
+    // console.log(Bamby.getStatus());
+    console.log(ChuckNorris.getStatus());
+    console.log(ChuckNorris.stamina);
+    JimCarrey.makeFire(ChuckNorris);
+    console.log(ChuckNorris.stamina);
+    console.log(JimCarrey.stamina);
+    JimCarrey.makeWeapon();
+    JimCarrey.giveWeapon(ChuckNorris);
+    console.log(ChuckNorris.showWeapon());
+    ChuckNorris.hunt(Bamby);
     console.log(Bamby.getStatus());
-    AngryBird.hunt(Bamby);
-    console.log(Bamby.getStatus());
+    ChuckNorris.move();
+    ChuckNorris.move();
+    ChuckNorris.move();
+    ChuckNorris.move();
+    ChuckNorris.move();
+    ChuckNorris.move();
+    ChuckNorris.move();
+    ChuckNorris.move();
+    ChuckNorris.move();
+    console.log(ChuckNorris.health);
+    ChuckNorris.feed(JimCarrey);
+    console.log(ChuckNorris.health);
+    console.log(JimCarrey.health);
 });
