@@ -144,12 +144,12 @@ function saySomeWords() {
 
 function checkTypeDecorator(fn, args) {
     return function () {
-        var sentece = 'The sentence consist of ',
+        var sentence = 'The sentence consist of ',
             type = '';
         for (var i = 0; i < arguments.length; i++) {
            type += typeof arguments[i] + ' ';
         }
-        console.log(sentece + type);
+        console.log(sentence + type);
         return fn.apply(this, arguments);
     }
 }
