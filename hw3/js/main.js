@@ -1,4 +1,5 @@
 var testObj = {
+
     first: 0,
     second: "1",
     third: function () {
@@ -6,22 +7,23 @@ var testObj = {
     }
 };
 
-
-function makeLogging(f, log) {
-
-  function wrapper() {
-      log.push(f.apply(this));
-      return f.call(this);
+function makeLog (obj) {
+    for (var key in obj) {
+        Object.defineProperties.bind(obj, key, {
+            get : function () {
+                console.log(key);
+                return key;
+            },
+            set: function(value) {
+                console.log(value);
+            }
+        });
     }
-
-  return wrapper;
+    return obj;
 }
-
-var log = [];
-testObj.third = makeLogging(testObj.third, log);
-testObj.second = makeLogging(testObj.second, log);
-testObj.third();
-console.log(log);
-console.log(log[0]);
-testObj.second;
-console.log(testObj.second);
+var test = makeLog(testObj);
+test.first = 2;
+console.log(test.third());
+console.log(test.first);
+console.log(testObj.first);
+test.third();

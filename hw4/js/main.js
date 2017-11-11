@@ -204,9 +204,3 @@ function Aborigine() {
 }
 var ChuckNorris = new Hunter('Chuck Norris', 200, 200);
 var JimCarrey = new Aborigine('Jim Carrey', 150, 150);
-document.addEventListener('DOMContentLoaded', function () {
-    //DEBUG
-    console.log(AngryBird.height);
-    AngryBird.move();
-    console.log(AngryBird.height);
-});
