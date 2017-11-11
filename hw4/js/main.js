@@ -113,8 +113,9 @@ function Eagle () {
     this.landed = function () {
         return eagle.height = 0;
     };
-    var animalMove = this.move(); // i have a question. if i call animal move in new this.move it crashes. but this code works
+    var animalMove = this.move;
     this.move = function () {
+        animalMove();
         eagle.fly();
     };
 }
@@ -205,5 +206,7 @@ var ChuckNorris = new Hunter('Chuck Norris', 200, 200);
 var JimCarrey = new Aborigine('Jim Carrey', 150, 150);
 document.addEventListener('DOMContentLoaded', function () {
     //DEBUG
-    
+    console.log(AngryBird.height);
+    AngryBird.move();
+    console.log(AngryBird.height);
 });

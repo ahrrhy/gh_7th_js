@@ -10,13 +10,10 @@ var testObj = {
 
 function observDeco(fn, args) {
     return function () {
-        console.log(fn);
+        console.log(fn());
         return fn.apply(this, arguments);
     }
 }
 testObj.third = observDeco(testObj.third);
 
 testObj.third();
-
-testObj.third = 'a';
-console.log(testObj.third);
