@@ -8,18 +8,23 @@ var testObj = {
 };
 
 function makeLog (obj) {
-    for (var key in obj) {
-        Object.defineProperties.bind(obj, key, {
-            get : function () {
-                console.log(key);
-                return key;
-            },
-            set: function(value) {
-                console.log(value);
-            }
-        });
-    }
-    return obj;
+    for (var key in obj) (function (key) {
+        return function () {
+            Object.defineProperties.bind(obj, key, {
+                get : function () {
+                    console.log(key);
+                    return key;
+                },
+                set: function(value) {
+                    console.log(value);
+                }
+            });
+            return obj;
+        }
+    })(key);
+
+
+
 }
 var test = makeLog(testObj);
 test.first = 2;
