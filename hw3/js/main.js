@@ -28,4 +28,3 @@ makeLog(testObj);
 testObj.third();
 testObj.second = 3;
 
-

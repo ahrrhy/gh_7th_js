@@ -17,22 +17,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hw3/index.html">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw4/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="20">
+              <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hw3/js/main.js">
+      <file leaf-file-name="proto.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hw4/js/proto.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="258">
+              <caret line="220" column="0" lean-forward="true" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,6 +79,7 @@
         <option value="$PROJECT_DIR$/for babel/deco.js" />
         <option value="$PROJECT_DIR$/for babel/gulpfile.js" />
         <option value="$PROJECT_DIR$/hw3/js/main.js" />
+        <option value="$PROJECT_DIR$/hw4/js/proto.js" />
       </list>
     </option>
   </component>
@@ -108,7 +113,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,11 +121,22 @@
               <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="gh-js" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gh-js" type="462c0819:PsiDirectoryNode" />
+              <item name="hw4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gh-js" type="462c0819:PsiDirectoryNode" />
+              <item name="hw4" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -144,26 +160,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.main.js (2)">
+  <component name="RunManager" selected="Node.js.proto.js">
     <configuration name="deco.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="deco.js" working-dir="$PROJECT_DIR$/for babel" />
     <configuration name="deco.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="deco.js" working-dir="$PROJECT_DIR$/for babel/dist" />
-    <configuration name="main.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="main.js" working-dir="$PROJECT_DIR$/hw4/js" />
     <configuration name="main.js (2)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="main.js" working-dir="$PROJECT_DIR$/hw3/js" />
     <configuration name="main.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="main.js" working-dir="$PROJECT_DIR$/hw2/js" />
+    <configuration name="proto.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="proto.js" working-dir="$PROJECT_DIR$/hw4/js" />
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Node.js.main.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.main.js (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.main.js (2)" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.deco.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.deco.js (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.main.js (2)" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.deco.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.deco.js (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.proto.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.main.js (2)" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.deco.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.deco.js (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.main.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.main.js (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.proto.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.main.js (2)" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.deco.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.deco.js (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.main.js" />
       </list>
     </recent_temporary>
   </component>
@@ -201,12 +217,15 @@
       <workItem from="1510520895041" duration="2363000" />
       <workItem from="1510603810039" duration="71000" />
       <workItem from="1510646986515" duration="137000" />
-      <workItem from="1510647160409" duration="1805000" />
+      <workItem from="1510647160409" duration="2516000" />
+      <workItem from="1510656730320" duration="670000" />
+      <workItem from="1510689420053" duration="613000" />
+      <workItem from="1510691381260" duration="5939000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104415000" />
+    <option name="totallyTimeSpent" value="112348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -243,13 +262,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hw1/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hw2/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -554,13 +566,6 @@
     <entry file="file://$PROJECT_DIR$/for babel/dist/deco.js" />
     <entry file="file://$PROJECT_DIR$/for babel/gulpfile.js" />
     <entry file="file://$PROJECT_DIR$/for babel/deco.js" />
-    <entry file="file://$PROJECT_DIR$/hw4/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="200" column="43" lean-forward="false" selection-start-line="200" selection-start-column="43" selection-end-line="200" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hw4/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -570,17 +575,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hw3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="119">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hw3/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="258">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw4/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw4/js/proto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="220" column="0" lean-forward="true" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
