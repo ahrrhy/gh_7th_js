@@ -38,8 +38,8 @@ console.log(outPut);
 // find animal coordinates
 
 let animalPos = getAnimalPos(matrix, animal),
-    animalPosX = animalPos[1],
-    animalPosY = animalPos[0];
+    animalPosX = animalPos[0],
+    animalPosY = animalPos[1];
 function getAnimalPos(arr, animal) {
     for (let i = 0; i < arr.length; i++) {
         let index = arr[i].indexOf(animal);
@@ -63,3 +63,26 @@ const chooseDirection = function () {
     return (rand() < 0.25) ? 'right' : (0.5 > rand() > 0.25) ? 'left' : (0.5 < rand() < 0.75) ? 'up' : 'down';
 };
 
+function move (arr, old_index, new_index) {
+    while (old_index < 0) {
+        old_index += arr.length;
+    }
+    while (new_index < 0) {
+        new_index += arr.length;
+    }
+    if (new_index >= arr.length) {
+        let k = new_index - arr.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
+    return arr; // for testing purposes
+}
+let mat = [empty, empty, empty, empty, animal, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty];
+console.log(mat);
+let matAnimalPos = getAnimalPos(mat, animal),
+    matAnimalPosX = matAnimalPos[0];
+//console.log(matAnimalPosX);
+mat = move(mat, matAnimalPosX, (matAnimalPosX + 1));
+console.log(mat);
