@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9055ac9d-779e-4efc-83d4-bf8d08ee9241" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw5/index.html" afterPath="$PROJECT_DIR$/hw5/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw5/js/main.js" afterPath="$PROJECT_DIR$/hw5/js/main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +20,18 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw5/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="214">
+              <caret line="90" column="13" lean-forward="false" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw5/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -32,8 +43,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -46,6 +57,8 @@
       <find>_health</find>
       <find>stamina</find>
       <find>emptySpace</find>
+      <find>motionAnimal</find>
+      <find>animalPosX</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -66,6 +79,7 @@
         <option value="$PROJECT_DIR$/for babel/gulpfile.js" />
         <option value="$PROJECT_DIR$/hw3/js/main.js" />
         <option value="$PROJECT_DIR$/hw4/js/proto.js" />
+        <option value="$PROJECT_DIR$/hw5/js/igor.js" />
         <option value="$PROJECT_DIR$/hw5/index.html" />
         <option value="$PROJECT_DIR$/hw5/js/main.js" />
       </list>
@@ -118,17 +132,6 @@
             <path>
               <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="gh-js" type="462c0819:PsiDirectoryNode" />
-              <item name="hw4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gh-js" type="462c0819:PsiDirectoryNode" />
-              <item name="hw4" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gh-js" type="462c0819:PsiDirectoryNode" />
               <item name="hw5" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -169,25 +172,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Node.js.main.js (1)">
-    <configuration name="deco.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="deco.js" working-dir="$PROJECT_DIR$/for babel" />
     <configuration name="deco.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="deco.js" working-dir="$PROJECT_DIR$/for babel/dist" />
+    <configuration name="igor.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="igor.js" working-dir="$PROJECT_DIR$/hw5/js" />
     <configuration name="main.js (1)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="main.js" working-dir="$PROJECT_DIR$/hw5/js" />
     <configuration name="main.js (2)" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="main.js" working-dir="$PROJECT_DIR$/hw3/js" />
     <configuration name="proto.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="proto.js" working-dir="$PROJECT_DIR$/hw4/js" />
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Node.js.main.js (2)" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.deco.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.deco.js (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.proto.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.main.js (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.proto.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.main.js (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.igor.js" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Node.js.main.js (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.main.js (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.proto.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.deco.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.deco.js (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.igor.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.main.js (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.proto.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.deco.js" />
       </list>
     </recent_temporary>
   </component>
@@ -230,12 +233,12 @@
       <workItem from="1510689420053" duration="613000" />
       <workItem from="1510691381260" duration="6003000" />
       <workItem from="1510779529704" duration="5144000" />
-      <workItem from="1510817719484" duration="13354000" />
+      <workItem from="1510817719484" duration="23642000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130910000" />
+    <option name="totallyTimeSpent" value="141198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -267,18 +270,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hw1/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hw2/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -580,14 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw5/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -614,10 +602,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/js/igor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw5/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hw5/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state relative-caret-position="214">
+          <caret line="90" column="13" lean-forward="false" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
           <folding />
         </state>
       </provider>
