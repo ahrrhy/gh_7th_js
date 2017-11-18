@@ -88,9 +88,7 @@ function animalMove(matrix, animal) {
         nextPosX = nextPos[1],
         currentPosX = currentPos[1],
         currentPosY = currentPos[0];
-    if (matrix[nextPosY][nextPosX] === brash) {
-        return matrix;
-    } else if (nextPosY < 0 || nextPosY > 14 || nextPosX < 0 || nextPosX > 14){
+    if ((nextPosY < 0 || nextPosY > 14 || nextPosX < 0 || nextPosX > 14) || (matrix[nextPosY][nextPosX] === brash)) {
         return matrix;
     } else {
         matrix[nextPosY][nextPosX] = animal;
@@ -109,7 +107,8 @@ function chooseDirection() {
     return (rand() < -0.25) ? 'up-left' : (-0.25 < rand() < -0.5) ? 'up-right' : (-0.5 < rand() < -0.75) ? 'down-right' : (-0.75 < rand() < 0) ? 'down-left' : (0 < rand() < 0.25) ? 'right' : (0.5 > rand() > 0.25) ? 'left' : (0.5 < rand() < 0.75) ? 'up' : 'down';
 }
 setInterval(function () {
-    console.clear();
+   // console.clear();
     let newMatrix = animalMove(matrix, animal);
+
     showMap(newMatrix);
 }, 500);
