@@ -10,8 +10,15 @@ let Mickey = new Mouse('Mickey', 50, 50);
 let AngryBird = new Eagle('AngryBird', 100, 100);
 let Bamby = new Deer('Bamby', 100, 150);
 
+
+// Debug
 console.log(ChuckNorris.say);
 console.log(JimCarrey.say);
 console.log(Mickey.say);
 console.log(AngryBird.say);
 console.log(Bamby.say);
+
+AngryBird.move();
+console.log(AngryBird.height);
+AngryBird.landed();
+console.log(AngryBird.height);

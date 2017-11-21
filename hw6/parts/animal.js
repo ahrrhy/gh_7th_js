@@ -13,6 +13,9 @@ export default class Animal {
         this.speed = 0;
     }
 
+    showName() {
+        return this.name;
+    }
     fastMove() {
         return this.speed = 30;
     }

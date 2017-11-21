@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9055ac9d-779e-4efc-83d4-bf8d08ee9241" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw4/js/proto.js" afterPath="$PROJECT_DIR$/hw4/js/proto.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw6/main.js" afterPath="$PROJECT_DIR$/hw6/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw6/parts/aborigine.js" afterPath="$PROJECT_DIR$/hw6/parts/aborigine.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw6/parts/animal.js" afterPath="$PROJECT_DIR$/hw6/parts/animal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw6/parts/deer.js" afterPath="$PROJECT_DIR$/hw6/parts/deer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw6/parts/eagle.js" afterPath="$PROJECT_DIR$/hw6/parts/eagle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw6/parts/human.js" afterPath="$PROJECT_DIR$/hw6/parts/human.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw6/parts/hunter.js" afterPath="$PROJECT_DIR$/hw6/parts/hunter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw6/parts/mouse.js" afterPath="$PROJECT_DIR$/hw6/parts/mouse.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/hw6/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -31,8 +37,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw6/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -43,8 +49,8 @@
       <file leaf-file-name="deer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw6/parts/deer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,8 +59,8 @@
       <file leaf-file-name="eagle.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw6/parts/eagle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="102">
+              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -63,8 +69,8 @@
       <file leaf-file-name="mouse.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw6/parts/mouse.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            <state relative-caret-position="85">
+              <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -73,8 +79,8 @@
       <file leaf-file-name="predator.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw6/parts/predator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+            <state relative-caret-position="0">
+              <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -83,8 +89,8 @@
       <file leaf-file-name="hunter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw6/parts/hunter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="102">
+              <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -93,8 +99,8 @@
       <file leaf-file-name="human.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw6/parts/human.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,8 +109,8 @@
       <file leaf-file-name="aborigine.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw6/parts/aborigine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="68">
+              <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -113,8 +119,8 @@
       <file leaf-file-name="animal.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw6/parts/animal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="23" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="170">
+              <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -172,15 +178,15 @@
         <option value="$PROJECT_DIR$/hw6/parts/mouse-class.js" />
         <option value="$PROJECT_DIR$/hw6/parts/aborigene.js" />
         <option value="$PROJECT_DIR$/hw6/index.html" />
-        <option value="$PROJECT_DIR$/hw6/main.js" />
-        <option value="$PROJECT_DIR$/hw6/parts/animal.js" />
         <option value="$PROJECT_DIR$/hw6/parts/predator.js" />
-        <option value="$PROJECT_DIR$/hw6/parts/aborigine.js" />
-        <option value="$PROJECT_DIR$/hw6/parts/human.js" />
-        <option value="$PROJECT_DIR$/hw6/parts/hunter.js" />
-        <option value="$PROJECT_DIR$/hw6/parts/mouse.js" />
-        <option value="$PROJECT_DIR$/hw6/parts/eagle.js" />
+        <option value="$PROJECT_DIR$/hw6/parts/animal.js" />
         <option value="$PROJECT_DIR$/hw6/parts/deer.js" />
+        <option value="$PROJECT_DIR$/hw6/parts/eagle.js" />
+        <option value="$PROJECT_DIR$/hw6/parts/mouse.js" />
+        <option value="$PROJECT_DIR$/hw6/parts/hunter.js" />
+        <option value="$PROJECT_DIR$/hw6/parts/human.js" />
+        <option value="$PROJECT_DIR$/hw6/parts/aborigine.js" />
+        <option value="$PROJECT_DIR$/hw6/main.js" />
       </list>
     </option>
   </component>
@@ -347,12 +353,12 @@
       <workItem from="1510955278113" duration="614000" />
       <workItem from="1510998145070" duration="764000" />
       <workItem from="1511017714245" duration="64000" />
-      <workItem from="1511206535879" duration="16730000" />
+      <workItem from="1511206535879" duration="18271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159514000" />
+    <option name="totallyTimeSpent" value="161055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -664,79 +670,79 @@
     <entry file="file://$PROJECT_DIR$/hw6/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw6/parts/animal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw6/parts/aborigine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw6/parts/human.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw6/parts/hunter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw6/parts/predator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw6/parts/mouse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw6/parts/eagle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hw6/parts/deer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw6/parts/mouse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw6/parts/hunter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw6/parts/human.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw6/parts/aborigine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw6/parts/animal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw6/parts/eagle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw6/parts/predator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hw6/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
