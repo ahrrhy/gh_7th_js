@@ -75,7 +75,7 @@ Animal.prototype.death = function () {
     return this._isAlive = false;
 };
 Animal.prototype.getAge = function () {
-    return this.age;
+    return this._age;
 };
 Animal.prototype.getStatus = function () {
     return this._isAlive;
