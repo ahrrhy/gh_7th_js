@@ -1,0 +1,25 @@
+body{
+    background: #a9a9a9;
+    text-align: center;
+}
+.container{
+    font: 400 1.2rem/1.5rem "Monospaced";
+    border-radius: 6px;
+    background: #5a5a5a;
+    display: inline-block;
+}
+.container p span{
+    margin: 0 5px;
+    padding: 5px;
+}
+.animal{
+    color: #ffffff;
+    font: 400 1.1rem/1.5rem "SansSerif";
+}
+.brash{
+    color: #00a500;
+    font-size: 1.5rem;
+}
+.empty{
+    color: #bbff34;
+}

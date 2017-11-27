@@ -113,6 +113,6 @@ function htmlWrite(arr) {
 }
 htmlWrite(matrix);
 setInterval(function () {
-    let newMatrix = dog.animalMove(matrix, animal);
-    htmlWrite(newMatrix);
+    matrix = dog.animalMove(matrix, animal);
+    htmlWrite(matrix);
 }, dog.speed);
