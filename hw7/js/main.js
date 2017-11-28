@@ -1,3 +1,4 @@
+// first part
 class Animal {
     constructor(name, view, speed) {
         this.name = name;
@@ -128,11 +129,12 @@ function drawMap(arr) {
     }
     div.innerHTML = output;
 }
-document.addEventListener('DOMContentLoaded', function () {
 
+document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(div);
     setInterval(function () {
         matrix = dog.animalMove(matrix, animal);
         drawMap(matrix);
     }, dog.speed);
 });
+
