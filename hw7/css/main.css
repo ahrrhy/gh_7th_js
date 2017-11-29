@@ -3,7 +3,7 @@ body{
     text-align: center;
 }
 .container{
-    font: 400 1.2rem/1.5rem "Monospaced";
+    font: 400 1.2rem/1.5rem "Monospace";
     border-radius: 6px;
     background: #5a5a5a;
     display: inline-block;
@@ -14,11 +14,13 @@ body{
 }
 .animal{
     color: #ffffff;
-    font: 400 1.1rem/1.5rem "SansSerif";
+    font: 400 1rem/1rem "Monospace";
+    padding: 0;
+    margin: 0;
 }
 .brash{
     color: #00a500;
-    font-size: 1.5rem;
+    font: 400 1rem/1rem "Monospace";
 }
 .empty{
     color: #bbff34;

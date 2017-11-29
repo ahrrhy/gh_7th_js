@@ -1,4 +1,10 @@
 // first part
+function randomInteger(min, max) {
+    let rand = min - 0.5 + Math.random() * (max - min + 1);
+    rand = Math.round(rand);
+    return rand;
+}
+
 class Animal {
     constructor(name, view, speed) {
         this.name = name;
@@ -16,17 +22,14 @@ class Animal {
     }
 
     chooseDirection() {
-        function rand(){
-            return Math.random() * getSign();
-        }
-        function getSign(){
-            return Math.random() < 0.5 ? -1 : 1;
-        }
-        return (-0.00000001< rand() < -0.25) ? 'up-left' : (-0.25 < rand() < -0.5) ? 'up-right' : (-0.5 < rand() < -0.75) ? 'down-right' : (-0.75 < rand() < 0) ? 'down-left' : (0 < rand() < 0.25) ? 'right' : (0.5 > rand() > 0.25) ? 'left' : (0.5 < rand() < 0.75) ? 'up' : 'down';
+        let value = randomInteger(1, 8);
+        console.log(value);
+        return (value === 1) ? 'up-left' : (value === 2) ? 'up-right' : (value === 3) ? 'down-right' : (value === 4) ? 'down-left' : (value === 5) ? 'right' : (value === 6) ? 'left' : (value === 7) ? 'up' : 'down';
     }
 
     getNextPosition(y, x) {
         let direction = this.chooseDirection();
+        console.log(direction);
         var y = y,
             x = x;
         if (direction === 'up') {
@@ -79,47 +82,91 @@ class Animal {
 let dog = new Animal('dog', '@', 800);
 
 // elements of Map
-let empty = ".",
+let empty,
     animal = dog.view;
-const brash = "*";
+const bush = ``;
 
-let matrix = [
-    [empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, brash],
-    [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty],
-    [empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-    [empty, empty, empty, empty, empty, animal, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty],
-    [empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-    [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, brash],
-    [empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-    [brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, brash, empty, empty, empty],
-    [empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-    [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-    [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, brash, empty, empty, brash, empty],
-    [empty, empty, brash, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-    [empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-    [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, brash],
-    [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-    [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty],
-    [empty, empty, brash, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-    [empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty],
-    [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, brash, empty],
-    [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-];
+// let matrix = [
+//     [empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, brash],
+//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty],
+//     [empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
+//     [empty, empty, empty, empty, empty, animal, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty],
+//     [empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
+//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, brash],
+//     [empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty],
+//     [brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, brash, empty, empty, empty],
+//     [empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
+//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
+//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, brash, empty, empty, brash, empty],
+//     [empty, empty, brash, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
+//     [empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
+//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, brash],
+//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
+//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty],
+//     [empty, empty, brash, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
+//     [empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty],
+//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, brash, empty],
+//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
+// ];
+let matrix = [];
+let matrixSize = {
+    xCurrent: 0,
+    yCurrent: 0,
+    xAce: 20,
+    yAce: 20,
+    [Symbol.iterator](){return this;},
+    next(){
+        if (this.yCurrent < this.yAce) {
+            matrix[this.yCurrent] = [];
+            return {
+                done: false,
+                value: this.current++,
+            }
+        }
+        // if (this.current < this.yAce) {
+        //    // matrix.push(this.xMatrix);
+        //
+        //     if (this.current <= this.xAce) {
+        //        // let rand = randomInteger(1, 10);
+        //        //  if (rand === 1) {
+        //        //      this.xMatrix.push(empty);
+        //        //  } else {this.xMatrix.push(bush);}
+        //
+        //         return {
+        //             done: false,
+        //             value: this.current++,
+        //         };
+        //     }
+        //
+        else {
+            delete this.current;
+            return {
+                done: true
+            };
+        }
+    }
+};
+
+for (let num of matrixSize) {
+
+}
+console.log(matrix);
+
 // create div tag to innerHTML of Map
-let div = document.createElement('div');
-div.setAttribute('class', 'container');
+
+// let div = document.createElement('div');
+// div.setAttribute('class', 'container');
 
 function drawMap(arr) {
     let output = ``;
-    //let length = arr.length;
     for (let arrElem of arr) {
         output += `<p>`;
         for (let arrElemDepth of arrElem) {
             if (arrElemDepth === empty) {
                 output += `<span class="empty">${arrElemDepth}</span>`;
             }
-            if (arrElemDepth === brash) {
-                output += `<span class="brash">${arrElemDepth}</span>`;
+            if (arrElemDepth === bush) {
+                output += `<span class="bush">${arrElemDepth}</span>`;
             }
             if (arrElemDepth === animal) {
                 output += `<span class="animal">${arrElemDepth}</span>`;
@@ -130,11 +177,10 @@ function drawMap(arr) {
     div.innerHTML = output;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    document.body.appendChild(div);
-    setInterval(function () {
-        matrix = dog.animalMove(matrix, animal);
-        drawMap(matrix);
-    }, dog.speed);
-});
-
+// document.addEventListener('DOMContentLoaded', function () {
+//     document.body.appendChild(div);
+//     setInterval(function () {
+//         matrix = dog.animalMove(matrix, animal);
+//         drawMap(matrix);
+//     }, dog.speed);
+// });

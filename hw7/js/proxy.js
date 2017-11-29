@@ -13,12 +13,12 @@ function setToMap(target, weakMap){
         // construct is a default Proxy event catcher
         construct: (target, argumentsList) => {
             // here i take the call new Animal
-            let animal = new target(...argumentsList);
+            let targetClass = new target(...argumentsList);
             // here i take new Animal's arguments
             let args = argumentsList;
             // setting animal and it's arguments to weakMap
-            weakMap.set(animal, args);
-            return animal;
+            weakMap.set(targetClass, args);
+            return targetClass;
         }
     };
     return new Proxy(target, handler);
