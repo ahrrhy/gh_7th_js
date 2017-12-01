@@ -5,6 +5,8 @@ function randomInteger(min, max) {
     return rand;
 }
 
+let matrix = [];
+
 class Animal {
     constructor(name, view, speed) {
         this.name = name;
@@ -82,105 +84,79 @@ class Animal {
 let dog = new Animal('dog', '@', 800);
 
 // elements of Map
-let empty,
-    animal = dog.view;
-const bush = ``;
-
-// let matrix = [
-//     [empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, brash],
-//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty],
-//     [empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-//     [empty, empty, empty, empty, empty, animal, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty],
-//     [empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, brash],
-//     [empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-//     [brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, brash, empty, empty, empty],
-//     [empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, brash, empty, empty, brash, empty],
-//     [empty, empty, brash, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-//     [empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, brash],
-//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty],
-//     [empty, empty, brash, empty, empty, empty, empty, empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-//     [empty, brash, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty],
-//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, brash, empty, empty, empty, brash, empty],
-//     [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
-// ];
-let matrix = [];
+let empty = 'empty',
+    animal = dog.view,
+    bush = 'bush';
+// this is object which sets matrix sizes and fills it with elements
 let matrixSize = {
-    xCurrent: 0,
-    yCurrent: 0,
     xAce: 20,
     yAce: 20,
-    [Symbol.iterator](){return this;},
+    [Symbol.iterator](){
+        return this;
+    },
     next(){
-        if (this.yCurrent < this.yAce) {
-            matrix[this.yCurrent] = [];
-            return {
-                done: false,
-                value: this.current++,
+       
+        for (let i = 0; i < this.yAce; i++) {
+            matrix[i] = [];
+            for (let j = 0; j < this.xAce; j++) {
+                let rand = randomInteger(1, 20);
+                let matrixValue = empty;
+                if (rand === 4) {
+                    matrixValue = bush;
+                }
+                matrix[i][j] = matrixValue;
             }
         }
-        // if (this.current < this.yAce) {
-        //    // matrix.push(this.xMatrix);
-        //
-        //     if (this.current <= this.xAce) {
-        //        // let rand = randomInteger(1, 10);
-        //        //  if (rand === 1) {
-        //        //      this.xMatrix.push(empty);
-        //        //  } else {this.xMatrix.push(bush);}
-        //
-        //         return {
-        //             done: false,
-        //             value: this.current++,
-        //         };
-        //     }
-        //
-        else {
-            delete this.current;
-            return {
-                done: true
-            };
+        return {
+            done: true
         }
+
     }
 };
 
-for (let num of matrixSize) {
-
-}
-console.log(matrix);
 
 // create div tag to innerHTML of Map
 
-// let div = document.createElement('div');
-// div.setAttribute('class', 'container');
+let div = document.createElement('div');
+div.setAttribute('class', 'container');
+
+function generateMatrix() {
+    // it creates matrix
+    for (let num of matrixSize) {
+
+    }
+    console.log(matrix);
+}
 
 function drawMap(arr) {
     let output = ``;
     for (let arrElem of arr) {
         output += `<p>`;
         for (let arrElemDepth of arrElem) {
+            let className;
             if (arrElemDepth === empty) {
-                output += `<span class="empty">${arrElemDepth}</span>`;
+                className = 'empty';
             }
             if (arrElemDepth === bush) {
-                output += `<span class="bush">${arrElemDepth}</span>`;
+                className = 'bush fa fa-tree';
             }
             if (arrElemDepth === animal) {
-                output += `<span class="animal">${arrElemDepth}</span>`;
+                className = 'animal';
             }
+            output += `<span class = "${className}"></span>`;
         }
         output += `</p>`;
     }
     div.innerHTML = output;
+    console.log(output);
 }
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     document.body.appendChild(div);
-//     setInterval(function () {
-//         matrix = dog.animalMove(matrix, animal);
-//         drawMap(matrix);
-//     }, dog.speed);
-// });
+document.addEventListener('DOMContentLoaded', function () {
+    document.body.appendChild(div);
+    generateMatrix();
+    drawMap(matrix);
+    // setInterval(function () {
+    //     matrix = dog.animalMove(matrix, animal);
+        
+    // }, dog.speed);
+});

@@ -10,7 +10,7 @@ body{
 }
 .container p span{
     margin: 0 5px;
-    padding: 5px;
+    padding: 0 5px;
 }
 .animal{
     color: #ffffff;
@@ -19,9 +19,9 @@ body{
     margin: 0;
 }
 .brash{
-    color: #00a500;
+    
     font: 400 1rem/1rem "Monospace";
 }
-.empty{
-    color: #bbff34;
+.fa{
+    color: #00a500;
 }
