@@ -13,15 +13,12 @@ body{
     padding: 0 5px;
 }
 .animal{
-    color: #ffffff;
-    font: 400 1rem/1rem "Monospace";
+    color: #aaddf0;
+    font-size: 1rem;
     padding: 0;
     margin: 0;
 }
-.brash{
-    
-    font: 400 1rem/1rem "Monospace";
-}
-.fa{
+.bush{
     color: #00a500;
+    font-size: 1rem;
 }

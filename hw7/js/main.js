@@ -4,7 +4,7 @@ function randomInteger(min, max) {
     rand = Math.round(rand);
     return rand;
 }
-
+// the matrix
 let matrix = [];
 
 class Animal {
@@ -72,7 +72,7 @@ class Animal {
             nextPosX = nextPos[1],
             currentPosX = currentPos[1],
             currentPosY = currentPos[0];
-        if ((nextPosY < 0 || nextPosY > 14 || nextPosX < 0 || nextPosX > 14) || (matrix[nextPosY][nextPosX] === brash)) {
+        if ((nextPosY < 0 || nextPosY > 14 || nextPosX < 0 || nextPosX > 14) || (matrix[nextPosY][nextPosX] === bush)) {
             return matrix;
         } else {
             matrix[nextPosY][nextPosX] = this.view;
@@ -85,7 +85,7 @@ let dog = new Animal('dog', '@', 800);
 
 // elements of Map
 let empty = 'empty',
-    animal = dog.view,
+    something = 'animal',
     bush = 'bush';
 // this is object which sets matrix sizes and fills it with elements
 let matrixSize = {
@@ -95,7 +95,6 @@ let matrixSize = {
         return this;
     },
     next(){
-       
         for (let i = 0; i < this.yAce; i++) {
             matrix[i] = [];
             for (let j = 0; j < this.xAce; j++) {
@@ -125,7 +124,17 @@ function generateMatrix() {
     for (let num of matrixSize) {
 
     }
-    console.log(matrix);
+}
+// add animal to matrix
+function addAnimal() {
+    let randX = randomInteger(1, matrixSize.xAce-1),
+        randY = randomInteger(1, matrixSize.yAce-1);
+    if (matrix[randY][randX] !== bush) {
+        matrix[randY][randX] = something;
+    } else {
+        matrix[randY][randX] = something;
+    }
+    return matrix;
 }
 
 function drawMap(arr) {
@@ -140,23 +149,23 @@ function drawMap(arr) {
             if (arrElemDepth === bush) {
                 className = 'bush fa fa-tree';
             }
-            if (arrElemDepth === animal) {
-                className = 'animal';
+            if (arrElemDepth === something) {
+                className = 'animal fa fa-android';
             }
             output += `<span class = "${className}"></span>`;
         }
         output += `</p>`;
     }
     div.innerHTML = output;
-    console.log(output);
 }
-
+generateMatrix();
+console.log(matrix);
+addAnimal();
+drawMap(matrix);
 document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(div);
-    generateMatrix();
-    drawMap(matrix);
-    // setInterval(function () {
-    //     matrix = dog.animalMove(matrix, animal);
-        
-    // }, dog.speed);
+    setInterval(function () {
+        let newMatrix = dog.animalMove(matrix, something);
+        drawMap(newMatrix);
+    }, dog.speed);
 });
