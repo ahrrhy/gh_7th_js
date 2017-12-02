@@ -6,7 +6,10 @@ function randomInteger(min, max) {
 }
 // the matrix
 let matrix = [];
-
+// elements of Map
+let empty = 'empty',
+    something = 'animal',
+    bush = 'bush';
 class Animal {
     constructor(name, view, speed) {
         this.name = name;
@@ -65,28 +68,25 @@ class Animal {
         return [y, x];
     }
 
-    animalMove(matrix, animal) {
-        let currentPos = this.getAnimalPosition(matrix, animal);
+    animalMove(arr, animal) {
+        let currentPos = this.getAnimalPosition(arr, animal);
         let nextPos = this.getNextPosition(currentPos[0],currentPos[1]);
         let nextPosY = nextPos[0],
             nextPosX = nextPos[1],
             currentPosX = currentPos[1],
             currentPosY = currentPos[0];
         if ((nextPosY < 0 || nextPosY > 14 || nextPosX < 0 || nextPosX > 14) || (matrix[nextPosY][nextPosX] === bush)) {
-            return matrix;
+            return arr;
         } else {
-            matrix[nextPosY][nextPosX] = this.view;
-            matrix[currentPosY][currentPosX] = empty;
-            return matrix;
+            arr[nextPosY][nextPosX] = something;
+            arr[currentPosY][currentPosX] = empty;
+            return arr;
         }
     }
 }
 let dog = new Animal('dog', '@', 800);
 
-// elements of Map
-let empty = 'empty',
-    something = 'animal',
-    bush = 'bush';
+
 // this is object which sets matrix sizes and fills it with elements
 let matrixSize = {
     xAce: 20,
@@ -112,19 +112,19 @@ let matrixSize = {
 
     }
 };
-
-
-// create div tag to innerHTML of Map
-
-let div = document.createElement('div');
-div.setAttribute('class', 'container');
-
 function generateMatrix() {
     // it creates matrix
     for (let num of matrixSize) {
 
     }
 }
+
+// create div tag to innerHTML of Map
+
+let div = document.createElement('div');
+div.setAttribute('class', 'container');
+
+
 // add animal to matrix
 function addAnimal() {
     let randX = randomInteger(1, matrixSize.xAce-1),
@@ -159,13 +159,15 @@ function drawMap(arr) {
     div.innerHTML = output;
 }
 generateMatrix();
-console.log(matrix);
-addAnimal();
+
+
 drawMap(matrix);
 document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(div);
+    addAnimal();
     setInterval(function () {
         let newMatrix = dog.animalMove(matrix, something);
         drawMap(newMatrix);
+        console.log(matrix);
     }, dog.speed);
 });
