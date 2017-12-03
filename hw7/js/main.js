@@ -28,13 +28,11 @@ class Animal {
 
     chooseDirection() {
         let value = randomInteger(1, 8);
-        console.log(value);
         return (value === 1) ? 'up-left' : (value === 2) ? 'up-right' : (value === 3) ? 'down-right' : (value === 4) ? 'down-left' : (value === 5) ? 'right' : (value === 6) ? 'left' : (value === 7) ? 'up' : 'down';
     }
 
     getNextPosition(y, x) {
         let direction = this.chooseDirection();
-        console.log(direction);
         var y = y,
             x = x;
         if (direction === 'up') {
@@ -98,7 +96,7 @@ let matrixSize = {
         for (let i = 0; i < this.yAce; i++) {
             matrix[i] = [];
             for (let j = 0; j < this.xAce; j++) {
-                let rand = randomInteger(1, 20);
+                let rand = randomInteger(1, 40);
                 let matrixValue = empty;
                 if (rand === 4) {
                     matrixValue = bush;
@@ -107,7 +105,8 @@ let matrixSize = {
             }
         }
         return {
-            done: true
+            done: true,
+            value: matrix
         }
 
     }
@@ -168,6 +167,5 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(function () {
         let newMatrix = dog.animalMove(matrix, something);
         drawMap(newMatrix);
-        console.log(matrix);
     }, dog.speed);
 });

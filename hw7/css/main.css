@@ -3,22 +3,23 @@ body{
     text-align: center;
 }
 .container{
-    font: 400 1.2rem/1.5rem "Monospace";
     border-radius: 6px;
     background: #5a5a5a;
-    display: inline-block;
 }
-.container p span{
-    margin: 0 5px;
-    padding: 0 5px;
+span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+span.animal, span.bush{
+    max-height: 17px;
+}
+span.empty{
+    height: 22px;
 }
 .animal{
     color: #aaddf0;
-    font-size: 1rem;
-    padding: 0;
-    margin: 0;
 }
 .bush{
     color: #00a500;
-    font-size: 1rem;
 }
