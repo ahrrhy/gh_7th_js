@@ -1,9 +1,9 @@
 import {getPosition} from "./functions.js";
-import {Plant} from "./class-plant.js";
+import {Plant} from "./plants-class.js";
 
 class Fruit {
-    constructor(fruitSize) {
-        this.fruitSize = fruitSize;
+    constructor(size) {
+        this.size = size;
         this.timeToLive = 4;
         this.isAlive = true;
     }
@@ -11,8 +11,8 @@ class Fruit {
         return this.isAlive = false;
     }
     chooseChild() {
-        if (this.fruitSize === 4) { return this.childSize = 2; }
-        if (this.fruitSize === 6) { return this.childSize = 3; }
+        if (this.size === 4) { return this.childSize = 2; }
+        if (this.size === 6) { return this.childSize = 3; }
     }
     makeNewPlant() {
         let curPos = getPosition(map, fruit),

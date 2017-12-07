@@ -1,0 +1,22 @@
+body{
+    background: #a9a9a9;
+    text-align: center;
+}
+.container{
+    border-radius: 6px;
+    background: #5a5a5a;
+}
+span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+.animal{
+    color: #aaddf0;
+}
+.bush{
+    color: #00a500;
+    background: #99D3FF;
+    padding-bottom: 2px;
+    border-radius: 2px;
+}
