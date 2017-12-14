@@ -2,9 +2,16 @@ body{
     background: #a9a9a9;
     text-align: center;
 }
+p{
+    margin: 0;
+    padding: 0;
+    line-height: 1rem;
+    font-size: 1rem;
+}
 .container{
     border-radius: 6px;
     background: #5a5a5a;
+    display: inline-block;
 }
 span{
     display: inline-block;
@@ -14,7 +21,7 @@ span{
 .animal{
     color: #aaddf0;
 }
-.bush{
+.bush {
     color: #00a500;
     background: #99D3FF;
     padding-bottom: 2px;
