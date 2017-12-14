@@ -111,9 +111,11 @@ export default class Map {
                         if (closestEmpty !== undefined) {
                             map[closestEmpty[0]][closestEmpty[1]] = fruit;
                         }
-                        if (fruit.isAlive) {
-                            fruit.live();
-                        }
+                    }
+                }
+                if (mapItemProto === 'Fruit') {
+                    if (mapItemProto.isAlive) {
+                        mapItemProto.live();
                     }
                 }
             }

@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9055ac9d-779e-4efc-83d4-bf8d08ee9241" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hw8/js/parts/fruit-class.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hw8/js/parts/functions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hw8/js/parts/plants-class.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw8/css/main.css" afterPath="$PROJECT_DIR$/hw8/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw8/index.html" afterPath="$PROJECT_DIR$/hw8/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw8/js/main.js" afterPath="$PROJECT_DIR$/hw8/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw8/js/parts/fruit.js" afterPath="$PROJECT_DIR$/hw8/js/parts/fruit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw8/js/parts/map.js" afterPath="$PROJECT_DIR$/hw8/js/parts/map.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="map.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw8/js/parts/map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="94" column="70" lean-forward="false" selection-start-line="94" selection-start-column="70" selection-end-line="94" selection-end-column="70" />
+            <state relative-caret-position="458">
+              <caret line="114" column="17" lean-forward="true" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -63,10 +59,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fruit.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fruit.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw8/js/parts/fruit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-358">
+            <state relative-caret-position="391">
+              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameters.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw8/js/parts/parameters.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -108,7 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hw4/js/main.js" />
         <option value="$PROJECT_DIR$/for babel/deco.js" />
         <option value="$PROJECT_DIR$/for babel/gulpfile.js" />
         <option value="$PROJECT_DIR$/hw5/js/igor.js" />
@@ -158,6 +163,7 @@
         <option value="$PROJECT_DIR$/hw8/js/parts/fruit-class.js" />
         <option value="$PROJECT_DIR$/hw8/index.html" />
         <option value="$PROJECT_DIR$/hw8/js/main.js" />
+        <option value="$PROJECT_DIR$/hw8/js/parts/fruit.js" />
         <option value="$PROJECT_DIR$/hw8/js/parts/map.js" />
       </list>
     </option>
@@ -358,12 +364,12 @@
       <workItem from="1513024381650" duration="1471000" />
       <workItem from="1513111416397" duration="4000" />
       <workItem from="1513198242441" duration="54000" />
-      <workItem from="1513286171812" duration="3232000" />
+      <workItem from="1513286171812" duration="3750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="305632000" />
+    <option name="totallyTimeSpent" value="306150000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -404,13 +410,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hw4/js/proto.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="218" column="0" lean-forward="false" selection-start-line="218" selection-start-column="0" selection-end-line="219" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hw6/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -682,6 +681,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hw8/js/parts/parameters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hw8/js/parts/plants.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-528">
@@ -690,18 +697,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw8/js/parts/map.js">
+    <entry file="file://$PROJECT_DIR$/hw8/js/parts/fruit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="94" column="70" lean-forward="false" selection-start-line="94" selection-start-column="70" selection-end-line="94" selection-end-column="70" />
+        <state relative-caret-position="391">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw8/js/parts/fruit.js">
+    <entry file="file://$PROJECT_DIR$/hw8/js/parts/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-358">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="458">
+          <caret line="114" column="17" lean-forward="true" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
           <folding />
         </state>
       </provider>

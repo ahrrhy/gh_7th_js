@@ -16,9 +16,10 @@ export default class Fruit {
     live() {
         if (this.isAlive === true) {
             this.timeToLive--;
+            console.log(this.timeToLive);
             if (this.timeToLive === 0) {
                 this.isAlive = false;
-                let childSize = this.chooseChild();
+                //let childSize = this.chooseChild();
                 this.makePlant = true;
             }
         }
