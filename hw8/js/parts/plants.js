@@ -17,12 +17,15 @@ export default class Plant {
         // fruitParams
         this.fruit = Fruit;
         this.fruitParams = plantParams.fruitParams;
+        this.health = 100;
         this.self = this;
     }
 
     isEaten() {
-        this.wasEaten = true;
-        return this.isAlive = false;
+        if (this.health <= 0) {
+            this.wasEaten = true;
+            return this.isAlive = false;
+        }
     }
     getGrowth() {
         if (this.age >= this.growthAge) {
@@ -39,7 +42,6 @@ export default class Plant {
         let type = this.getTheType();
         if (type === 'bush') { return this.fruitParams.size = 4; }
         if (type === 'tree') { return this.fruitParams.size = 6; }
-        console.log();
     }
 
     timeToFruit() {

@@ -4,4 +4,16 @@ function randomInteger(min, max) {
     return rand;
 }
 
-export {randomInteger};
+function getClosestEmpty(matrix, coordinates) {
+    let X = coordinates[1],
+        Y = coordinates[0],
+        map = matrix,
+        changeX = randomInteger(-1, 1),
+        changeY = randomInteger(-1, 1);
+    if (map[Y+changeY][X+changeX] === 'empty') {
+        return [Y+changeY, X+changeX];
+    }
+    return getClosestEmpty(matrix, [Y,X]);
+}
+
+export {randomInteger, getClosestEmpty};

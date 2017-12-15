@@ -1,4 +1,4 @@
-import {randomInteger} from "./functions.js";
+import {randomInteger, getClosestEmpty} from "./functions.js";
 
 export default class Map {
     constructor(mapElements) {
@@ -7,9 +7,6 @@ export default class Map {
         this.ySize = mapElements.ySize;
         //map elements
         this.empty = mapElements.empty;
-        this.fruit = mapElements.fruit;
-        this.deer = mapElements.deer;
-        this.mouse = mapElements.mouse;
         // the quantity of decorations. i think it will help to create new instances of Plant;
         this.startTreesQuantity = mapElements.startTreesQuantity;
         this.startBushQuantity = mapElements.startBushQuantity;
@@ -43,18 +40,7 @@ export default class Map {
         }
         return this.getRandomEmpty();
     }
-    getClosestEmpty(arr) {
-        let X = arr[1],
-            Y = arr[0],
-            map = this.map,
-            changeX = randomInteger(-1, 1),
-            changeY = randomInteger(-1, 1);
-        if (map[Y+changeY][X+changeX] === this.empty) {
-            return [Y+changeY, X+changeX];
-        }
-        return this.getClosestEmpty([Y,X]);
 
-    }
     // make new instance of element
     mapElementNewInstance(Element, elementParameters) {
         return new Element(elementParameters);
@@ -84,17 +70,19 @@ export default class Map {
         for (let item of map) {
             for (let mapItem of item) {
                 let mapItemProto = this.getItemConstructorName(mapItem);
-                if (mapItem.constructor.name !== 'String') {
-                    console.log(mapItem.constructor.name);
+
+                if (mapItemProto === 'Animal') {
+                    console.log(mapItem.Position);
+                    console.log(mapItem.see(map, mapItem.Position));
                 }
+
                 if (mapItemProto === 'Plant') {
                     mapItem.live();
-                    console.log(mapItem.Position);
                     let posX = mapItem.Position[1],
                         posY = mapItem.Position[0],
                         closestEmpty;
 
-                    closestEmpty = this.getClosestEmpty([posY, posX]);
+                    closestEmpty = getClosestEmpty(this.map, [posY, posX]);
                     if (mapItem.timeToFruit()) {
                         mapItem.getFruitSize();
                         fruit = this.mapElementNewInstance(mapItem.fruit, mapItem.fruitParams);
@@ -109,13 +97,9 @@ export default class Map {
                 }
                 if (mapItemProto === 'Fruit') {
                     mapItem.live();
-                    console.log(mapItem.Position);
                     if (mapItem.makePlant) {
-                        // newPlant.Position[0] = mapItem.Position[0];
-                        // newPlant.Position[1] = mapItem.Position[1];
                         let newPlant = this.mapElementNewInstance(mapItem.plant, mapItem.childParams);
                         newPlant.Position = mapItem.Position;
-                        console.log(newPlant.Position);
                         mapItem.isAlive = false;
                         this.mapClearElement(mapItem);
                         map[newPlant.Position[0]][newPlant.Position[1]] = newPlant;

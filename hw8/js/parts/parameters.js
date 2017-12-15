@@ -29,12 +29,22 @@ let mapElements = {
     xSize : 30,
     ySize : 30,
     empty : 'empty',
-    fruit : 'fruit',
-    deer : 'deer',
-    mouse : 'mouse',
     startTreesQuantity: 2,
     startBushQuantity: 2,
 };
 
+let deerParams = {
+    health : 100,
+    satiety : 100,
+    cssClass : 'flaticon-animal',
+    food : ['Plant', 'Fruit']
+};
 
-export {mapElements,treeParams, bushParams, fruitParams};
+let mouseParams = {
+    health : 50,
+    satiety : 50,
+    cssClass : 'flaticon-mouse',
+    food : ['Fruit']
+};
+
+export {mapElements, treeParams, bushParams, fruitParams, deerParams, mouseParams};

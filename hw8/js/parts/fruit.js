@@ -33,16 +33,6 @@ export default class Fruit {
         }
     }
 
-
-    // makeNewPlant() {
-    //     let curPos = getPosition(map, fruit),
-    //         curPosY = curPos[0],
-    //         curPosX = curPos[1];
-    //
-    //     map[curPosY][curPosX] = new Plant(this.childSize);
-    //     return this.isAlive = false;
-    // }
-
     view() {
         if (this.isAlive === false) {
             return 'empty';

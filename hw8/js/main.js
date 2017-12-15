@@ -1,16 +1,14 @@
 // importing functions
-import {randomInteger} from "./parts/functions.js";
+import {randomInteger, getClosestEmpty} from "./parts/functions.js";
 
 // importing parameters
-import {mapElements} from "./parts/parameters.js";
-import {treeParams} from "./parts/parameters.js";
-import {bushParams} from "./parts/parameters.js";
-
+import {mapElements, treeParams, bushParams, deerParams, mouseParams} from "./parts/parameters.js";
 
 // importing classes
 import Map from "./parts/map.js";
 import Plant from "./parts/plants.js";
 import Fruit from "./parts/fruit.js";
+import Animal from "./parts/animal.js";
 
 let matrix = new Map(mapElements);
 
@@ -18,6 +16,7 @@ matrix.mapGenerate();
 // creating new instances of plants
 matrix.mapAddDecorations(Plant, treeParams, matrix.startTreesQuantity);
 matrix.mapAddDecorations(Plant, bushParams, matrix.startBushQuantity);
+matrix.mapAddDecorations(Animal, deerParams, 1);
 export {matrix};
 
 let div = document.createElement('div');
@@ -26,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(div);
     matrix.mapDraw(div);
     setInterval(() => {
+
         console.log(matrix.map);
         matrix.mapLive();
         matrix.mapDraw(div);
