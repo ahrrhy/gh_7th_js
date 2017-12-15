@@ -25,9 +25,9 @@ div.setAttribute('class', 'container');
 document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(div);
     matrix.mapDraw(div);
-    setInterval(function () {
+    setInterval(() => {
         console.log(matrix.map);
-        matrix.mapPlantsLive();
+        matrix.mapLive();
         matrix.mapDraw(div);
     }, 2000);
 });

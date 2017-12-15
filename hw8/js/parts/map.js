@@ -75,48 +75,54 @@ export default class Map {
             map[Y][X] = decorElement;
         }
     }
-    // findMapElements() {
-    //     let map = this.map;
-    //     for (let mapElem of map) {
-    //         for (let mapElemDepth of mapElem) {
-    //             if (mapElemDepth !== this.empty) {
-    //                 this.decorElementsStore.push(mapElemDepth);
-    //             }
-    //         }
-    //     }
-    // }
+
     // i try to make every plant live
-    mapPlantsLive() {
+    mapLive() {
         let map = this.map,
             empty = this.empty,
             fruit;
         for (let item of map) {
             for (let mapItem of item) {
                 let mapItemProto = this.getItemConstructorName(mapItem);
-                if (mapItemProto === 'Plant') {
+                if (mapItem.constructor.name !== 'String') {
                     console.log(mapItem.constructor.name);
+                }
+                if (mapItemProto === 'Plant') {
                     mapItem.live();
+                    console.log(mapItem.Position);
                     let posX = mapItem.Position[1],
                         posY = mapItem.Position[0],
                         closestEmpty;
 
                     closestEmpty = this.getClosestEmpty([posY, posX]);
-                    if (mapItem.isAlive === false) {
-                        map[posY][posX] = empty;
-                    }
                     if (mapItem.timeToFruit()) {
                         mapItem.getFruitSize();
                         fruit = this.mapElementNewInstance(mapItem.fruit, mapItem.fruitParams);
 
                         if (closestEmpty !== undefined) {
                             map[closestEmpty[0]][closestEmpty[1]] = fruit;
+                            fruit.Position[1] = closestEmpty[1];
+                            fruit.Position[0] = closestEmpty[0];
                         }
                     }
+
                 }
                 if (mapItemProto === 'Fruit') {
-                    if (mapItemProto.isAlive) {
-                        mapItemProto.live();
+                    mapItem.live();
+                    console.log(mapItem.Position);
+                    if (mapItem.makePlant) {
+                        // newPlant.Position[0] = mapItem.Position[0];
+                        // newPlant.Position[1] = mapItem.Position[1];
+                        let newPlant = this.mapElementNewInstance(mapItem.plant, mapItem.childParams);
+                        newPlant.Position = mapItem.Position;
+                        console.log(newPlant.Position);
+                        mapItem.isAlive = false;
+                        this.mapClearElement(mapItem);
+                        map[newPlant.Position[0]][newPlant.Position[1]] = newPlant;
                     }
+                }
+                if (mapItem.wasEaten) {
+                    this.mapClearElement(mapItem);
                 }
             }
         }
@@ -139,5 +145,15 @@ export default class Map {
             output += `</p>`;
         }
         htmlNode.innerHTML = output;
+    }
+
+    mapClearElement(mapElement) {
+        if (mapElement.isAlive === false) {
+            let map = this.map,
+                empty = this.empty,
+                posX = mapElement.Position[1],
+                posY = mapElement.Position[0];
+            map[posY][posX] = empty;
+        }
     }
 }

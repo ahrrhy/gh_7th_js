@@ -8,6 +8,7 @@ export default class Plant {
         this.isGrowth = false;
         this.size = plantParams.size;
         this.isAlive = true;
+        this.wasEaten = false;
         this.makeFruitPeriod = plantParams.makeFruitPeriod;
         this.bushClass = plantParams.bushClass;
         this.treeClass = plantParams.treeClass;
@@ -20,6 +21,7 @@ export default class Plant {
     }
 
     isEaten() {
+        this.wasEaten = true;
         return this.isAlive = false;
     }
     getGrowth() {
@@ -35,8 +37,8 @@ export default class Plant {
 
     getFruitSize() {
         let type = this.getTheType();
-        if (type === 'bush') { return this.fruitParams.fruitSize = 4; }
-        if (type === 'tree') { return this.fruitParams.fruitSize = 6; }
+        if (type === 'bush') { return this.fruitParams.size = 4; }
+        if (type === 'tree') { return this.fruitParams.size = 6; }
         console.log();
     }
 
@@ -72,6 +74,7 @@ export default class Plant {
 
     live() {
         if (this.isAlive === true) {
+            this.getFruitSize();
             this.age++;
             this.getGrowth();
         }

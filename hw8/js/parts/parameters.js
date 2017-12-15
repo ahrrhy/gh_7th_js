@@ -1,7 +1,8 @@
 // map parameters fo class Map constructor
 let fruitParams = {
     timeToLive : 4,
-    fruitClass : 'flaticon-nature'
+    fruitClass : 'flaticon-nature',
+    size : 0
 };
 let treeParams = {
     // constructor's set
@@ -31,8 +32,8 @@ let mapElements = {
     fruit : 'fruit',
     deer : 'deer',
     mouse : 'mouse',
-    startTreesQuantity: 5,
-    startBushQuantity: 5,
+    startTreesQuantity: 2,
+    startBushQuantity: 2,
 };
 
 

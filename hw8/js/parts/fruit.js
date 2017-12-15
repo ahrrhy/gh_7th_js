@@ -1,25 +1,33 @@
+import {bushParams, treeParams} from "./parameters.js";
+import Plant from "./plants.js";
+
 export default class Fruit {
     constructor(fruitParams) {
         this.size = fruitParams.size;
         this.timeToLive = fruitParams.timeToLive;
         this.fruitClass = fruitParams.fruitClass;
         this.isAlive = true;
+        this.wasEaten = false;
+        this.age = 0;
         this.makePlant = false;
+        this.Position = [];
+        this.plant = Plant;
+        this.childParams = {};
     }
     isEaten() {
+        this.wasEaten = true;
         return this.isAlive = false;
     }
     chooseChild() {
-        if (this.size === 4) { return this.childSize = 2; }
-        if (this.size === 6) { return this.childSize = 3; }
+        if (this.size === 4) { return this.childParams = bushParams; }
+        if (this.size === 6) { return this.childParams = treeParams; }
     }
     live() {
         if (this.isAlive === true) {
-            this.timeToLive--;
-            console.log(this.timeToLive);
-            if (this.timeToLive === 0) {
-                this.isAlive = false;
-                //let childSize = this.chooseChild();
+            this.age++;
+            let ageCheck = this.age === this.timeToLive;
+            if (ageCheck) {
+                let childSize = this.chooseChild();
                 this.makePlant = true;
             }
         }
@@ -42,9 +50,5 @@ export default class Fruit {
         if (this.isAlive === true && this.timeToLive > 0) {
             return `${this.fruitClass} fruit`;
         }
-    }
-
-    toString() {
-        return 'fruit';
     }
 }
