@@ -35,9 +35,19 @@ export default class Animal {
         }
     }
 
-    see(matrix, coordinates) {
-        let closestEmpty = getClosestEmpty(matrix, coordinates);
-        return closestEmpty;
+    see(matrix) {
+        let X = this.Position[1],
+            Y = this.Position[0],
+            elemenPosition = matrix[Y][X],
+            leftUp = matrix[Y-1][X-1],
+            up = matrix[Y-1][X],
+            upRight = matrix[Y-1][X+1],
+            right = matrix[Y][X+1],
+            downRight = matrix[Y+1][X+1],
+            down = matrix[Y+1][X],
+            downLeft = matrix[Y+1][X-1],
+            left = matrix[Y][X-1];
+        let closestElements = [elemenPosition, leftUp, up, upRight, right, downRight, down, downLeft, left];
     }
 
     eat(food) {

@@ -93,7 +93,6 @@ export default class Map {
                             fruit.Position[0] = closestEmpty[0];
                         }
                     }
-
                 }
                 if (mapItemProto === 'Fruit') {
                     mapItem.live();
