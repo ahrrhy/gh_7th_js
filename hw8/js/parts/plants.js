@@ -1,19 +1,17 @@
-
+import LiveNature from "./live-nature.js";
 import Fruit from "./fruit.js";
 
-export default class Plant {
+export default class Plant extends LiveNature{
     constructor(plantParams) {
-        this.age = 0;
+        super(plantParams);
         this.growthAge = plantParams.growthAge;
         this.isGrowth = false;
         this.size = plantParams.size;
-        this.isAlive = true;
         this.wasEaten = false;
         this.makeFruitPeriod = plantParams.makeFruitPeriod;
         this.bushClass = plantParams.bushClass;
         this.treeClass = plantParams.treeClass;
         this.springClass = plantParams.springClass;
-        this.Position = [];
         // fruitParams
         this.fruit = Fruit;
         this.fruitParams = plantParams.fruitParams;
@@ -59,6 +57,7 @@ export default class Plant {
     }
 
     view() {
+        super.view();
         let isGrowth = this.isGrowth === true,
             isAlive = this.isAlive === true,
             type = this.getTheType();
@@ -75,6 +74,7 @@ export default class Plant {
     }
 
     live() {
+        super.view();
         if (this.isAlive === true) {
             this.getFruitSize();
             this.age++;

@@ -3,17 +3,23 @@ function randomInteger(min, max) {
     rand = Math.round(rand);
     return rand;
 }
+function getRandomOne() {
+    return Math.random() < 0.5 ? -1 : 1;
+}
 
 function getClosestEmpty(matrix, coordinates) {
     let X = coordinates[1],
         Y = coordinates[0],
         map = matrix,
-        changeX = randomInteger(-1, 1),
-        changeY = randomInteger(-1, 1);
+        changeX = getRandomOne(),
+        changeY = getRandomOne();
+    if (changeX === undefined) {
+        changeX = getRandomOne();
+    }
     if (map[Y+changeY][X+changeX] === 'empty') {
         return [Y+changeY, X+changeX];
     }
     return getClosestEmpty(matrix, [Y,X]);
 }
 
-export {randomInteger, getClosestEmpty};
+export {randomInteger, getClosestEmpty, getRandomOne};

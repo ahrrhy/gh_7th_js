@@ -1,21 +1,15 @@
 import {randomInteger, getClosestEmpty} from "./functions.js";
+import LiveNature from "./live-nature.js";
 
-export default class Animal {
-    constructor(animalParam) {
-        this.age = 0;
-        this.health = animalParam.health;
-        this._fullHealth = animalParam.health;
-        this.satiety = animalParam.satiety;
-        this._fullSatiety = animalParam.satiety;
+export default class Animal extends LiveNature {
+    constructor(parameters) {
+        super(parameters);
+        this.health = parameters.health;
+        this._fullHealth = parameters.health;
+        this.satiety = parameters.satiety;
+        this._fullSatiety = parameters.satiety;
         this.satietyDecrease = this.satiety/100;
-        this.isAlive = true;
-        this.Position = [];
-        this.cssClass = animalParam.cssClass;
-        this.food = animalParam.food;
-    }
-
-    isDead() {
-        return this.isAlive = false;
+        this.food = parameters.food;
     }
 
     healthReduce(value) {
@@ -38,7 +32,6 @@ export default class Animal {
     see(matrix) {
         let X = this.Position[1],
             Y = this.Position[0],
-            elemenPosition = matrix[Y][X],
             leftUp = matrix[Y-1][X-1],
             up = matrix[Y-1][X],
             upRight = matrix[Y-1][X+1],
@@ -46,22 +39,53 @@ export default class Animal {
             downRight = matrix[Y+1][X+1],
             down = matrix[Y+1][X],
             downLeft = matrix[Y+1][X-1],
-            left = matrix[Y][X-1];
-        let closestElements = [elemenPosition, leftUp, up, upRight, right, downRight, down, downLeft, left];
-    }
+            left = matrix[Y][X-1],
+            itemConstructor;
+        let closestElements = [leftUp, up, upRight, right, downRight, down, downLeft, left];
+        let checkAllEmpty = closestElements.every((item) => {
+            if (item !== undefined) {
+                itemConstructor = item.constructor.name;
+                return itemConstructor === 'String';
+            }
+            if (item === undefined) {
+                return true;
+            }
+        });
 
+        let food = closestElements.find((item) => {
+            let food;
+            if (item !== undefined) {
+                itemConstructor = item.constructor.name;
+                for (let i =0; i < this.food.length; i++) {
+                    if (itemConstructor === this.food[i]) {
+                        console.log(item);
+                        food = item;
+                    }
+                }
+            }
+            return food === item;
+        });
+        // it is the ending of method see();
+        if (this.satiety < this._fullSatiety) {
+            this.eat(food);
+        }
+        // else if (checkAllEmpty) {
+        //     this.move();
+        // }
+    }
     eat(food) {
-        if (this.satiety !== this._fullSatiety) {
 
-        }
     }
 
-    view() {
-        if (this.isAlive) {
-            return this.cssClass;
-        }
-        if (!this.isAlive) {
-            return 'empty';
-        }
-    }
+    // move(matrix) {
+    //     let currentPos = this.Position;
+    //     let nextPos = getClosestEmpty(matrix, currentPos);
+    //     let nextPosY = nextPos[0],
+    //         nextPosX = nextPos[1],
+    //         currentPosX = currentPos[1],
+    //         currentPosY = currentPos[0];
+    //     matrix[nextPosY][nextPosX] = this;
+    //     matrix[currentPosY][currentPosX] = empty;
+    //     return matrix;
+    // }
 }

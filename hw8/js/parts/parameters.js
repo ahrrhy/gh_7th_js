@@ -1,7 +1,7 @@
 // map parameters fo class Map constructor
 let fruitParams = {
     timeToLive : 4,
-    fruitClass : 'flaticon-nature',
+    cssClass : 'flaticon-nature',
     size : 0
 };
 let treeParams = {
@@ -29,8 +29,8 @@ let mapElements = {
     xSize : 30,
     ySize : 30,
     empty : 'empty',
-    startTreesQuantity: 2,
-    startBushQuantity: 2,
+    startTreesQuantity: 6,
+    startBushQuantity: 6,
 };
 
 let deerParams = {

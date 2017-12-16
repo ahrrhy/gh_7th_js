@@ -17,7 +17,6 @@ matrix.mapGenerate();
 matrix.mapAddDecorations(Plant, treeParams, matrix.startTreesQuantity);
 matrix.mapAddDecorations(Plant, bushParams, matrix.startBushQuantity);
 matrix.mapAddDecorations(Animal, deerParams, 1);
-export {matrix};
 
 let div = document.createElement('div');
 div.setAttribute('class', 'container');
@@ -29,5 +28,5 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(matrix.map);
         matrix.mapLive();
         matrix.mapDraw(div);
-    }, 2000);
+    }, 1000);
 });

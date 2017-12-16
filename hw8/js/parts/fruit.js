@@ -1,18 +1,17 @@
 import {bushParams, treeParams} from "./parameters.js";
 import Plant from "./plants.js";
+import LiveNature from "./live-nature.js";
 
-export default class Fruit {
-    constructor(fruitParams) {
-        this.size = fruitParams.size;
-        this.timeToLive = fruitParams.timeToLive;
-        this.fruitClass = fruitParams.fruitClass;
-        this.isAlive = true;
+export default class Fruit extends LiveNature {
+    constructor(parameters) {
+        super(parameters);
+        this.size = parameters.size;
+        this.timeToLive = parameters.timeToLive;
         this.wasEaten = false;
-        this.age = 0;
         this.makePlant = false;
-        this.Position = [];
         this.plant = Plant;
         this.childParams = {};
+        this.health = 100;
     }
     isEaten() {
         this.wasEaten = true;
@@ -23,6 +22,7 @@ export default class Fruit {
         if (this.size === 6) { return this.childParams = treeParams; }
     }
     live() {
+        super.live();
         if (this.isAlive === true) {
             this.age++;
             let ageCheck = this.age === this.timeToLive;
@@ -34,11 +34,10 @@ export default class Fruit {
     }
 
     view() {
-        if (this.isAlive === false) {
-            return 'empty';
-        }
+        super.view();
+
         if (this.isAlive === true && this.timeToLive > 0) {
-            return `${this.fruitClass} fruit`;
+            return `${this.cssClass} fruit`;
         }
     }
 }

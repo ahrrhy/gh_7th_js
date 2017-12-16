@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(div);
     addAnimal();
     setInterval(function () {
-        let newMatrix = dog.animalMove(matrix, something);
+        let newMatrix = dog.animalMove(matrix, dog);
         drawMap(newMatrix);
     }, dog.speed);
 });

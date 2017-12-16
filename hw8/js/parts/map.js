@@ -49,7 +49,6 @@ export default class Map {
     // add new instances of decoration elements in the beginning
     mapAddDecorations(element, elementParameters, elementQuantity) {
         for (let i = 0; i < elementQuantity; i++) {
-            //console.log(this.mapGetRandomEmpty());
             let randCoord = this.getRandomEmpty();
             let decorElement = this.mapElementNewInstance(element, elementParameters),
                 map = this.map,
@@ -73,7 +72,7 @@ export default class Map {
 
                 if (mapItemProto === 'Animal') {
                     console.log(mapItem.Position);
-                    console.log(mapItem.see(map, mapItem.Position));
+                    mapItem.see(map, mapItem.Position);
                 }
 
                 if (mapItemProto === 'Plant') {
