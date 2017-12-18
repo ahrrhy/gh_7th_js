@@ -12,6 +12,7 @@ export default class Fruit extends LiveNature {
         this.plant = Plant;
         this.childParams = {};
         this.health = 100;
+        this.cssClass = parameters.cssClass;
     }
     isEaten() {
         this.wasEaten = true;
@@ -23,8 +24,8 @@ export default class Fruit extends LiveNature {
     }
     live() {
         super.live();
+        this.view();
         if (this.isAlive === true) {
-            this.age++;
             let ageCheck = this.age === this.timeToLive;
             if (ageCheck) {
                 let childSize = this.chooseChild();
@@ -35,7 +36,6 @@ export default class Fruit extends LiveNature {
 
     view() {
         super.view();
-
         if (this.isAlive === true && this.timeToLive > 0) {
             return `${this.cssClass} fruit`;
         }

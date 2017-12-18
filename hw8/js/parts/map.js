@@ -95,6 +95,7 @@ export default class Map {
                 }
                 if (mapItemProto === 'Fruit') {
                     mapItem.live();
+                    console.log(mapItem.age);
                     if (mapItem.makePlant) {
                         let newPlant = this.mapElementNewInstance(mapItem.plant, mapItem.childParams);
                         newPlant.Position = mapItem.Position;

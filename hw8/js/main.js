@@ -28,5 +28,5 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(matrix.map);
         matrix.mapLive();
         matrix.mapDraw(div);
-    }, 1000);
+    }, 2000);
 });

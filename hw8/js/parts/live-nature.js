@@ -1,7 +1,7 @@
 export default class LiveNature {
     constructor(parameters) {
         this.age = 0;
-        this.cssClasses = parameters.cssClass;
+        this.cssClass = parameters.cssClass;
         this.isAlive = true;
         this.Position = [];
     }
@@ -19,7 +19,7 @@ export default class LiveNature {
 
     view() {
         if (this.isAlive) {
-            return this.cssClasses;
+            return this.cssClass;
         }
         if (!this.isAlive) {
             return 'empty';
