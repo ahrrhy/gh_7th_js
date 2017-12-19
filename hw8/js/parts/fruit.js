@@ -11,7 +11,6 @@ export default class Fruit extends LiveNature {
         this.makePlant = false;
         this.plant = Plant;
         this.childParams = {};
-        this.health = 100;
         this.cssClass = parameters.cssClass;
     }
     isEaten() {

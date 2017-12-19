@@ -4,8 +4,6 @@ import LiveNature from "./live-nature.js";
 export default class Animal extends LiveNature {
     constructor(parameters) {
         super(parameters);
-        this.health = parameters.health;
-        this._fullHealth = parameters.health;
         this.satiety = parameters.satiety;
         this._fullSatiety = parameters.satiety;
         this.satietyDecrease = this.satiety/100;

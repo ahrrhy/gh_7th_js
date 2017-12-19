@@ -2,7 +2,9 @@
 let fruitParams = {
     timeToLive : 4,
     cssClass : 'flaticon-nature',
-    size : 0
+    size : 0,
+    _fullHealth : 100,
+    health : 100
 };
 let treeParams = {
     // constructor's set
@@ -13,7 +15,8 @@ let treeParams = {
     treeClass : 'flaticon-tree-shape-of-thin-trunk-with-small-leaves-circles-outlines',
     bushClass : 'flaticon-big-plant-like-a-small-tree',
     springClass: 'flaticon-tree-trunk-growing-from-soil',
-    fruitParams : fruitParams
+    fruitParams : fruitParams,
+    health : 100
 };
 let bushParams = {
     size : 2,
@@ -22,7 +25,8 @@ let bushParams = {
     treeClass : 'flaticon-tree-shape-of-thin-trunk-with-small-leaves-circles-outlines',
     bushClass : 'flaticon-big-plant-like-a-small-tree',
     springClass: 'flaticon-tree-trunk-growing-from-soil',
-    fruitParams : fruitParams
+    fruitParams : fruitParams,
+    health : 100
 };
 
 let mapElements = {

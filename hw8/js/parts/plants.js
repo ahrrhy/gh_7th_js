@@ -15,25 +15,10 @@ export default class Plant extends LiveNature{
         // fruitParams
         this.fruit = Fruit;
         this.fruitParams = plantParams.fruitParams;
-        this.health = 100;
-        this._fullHealth = 100;
-        this.isDamaged = false;
+
         this.self = this;
     }
 
-    damaged() {
-        if (this.health < this._fullHealth && this.health > 0) {
-            return this.isDamaged = true;
-        }
-    }
-
-    isBitten(damage) {
-        this.health -= damage;
-        if (this.health <= 0) {
-            this.wasEaten = true;
-            return this.isAlive = false;
-        }
-    }
     getGrowth() {
         if (this.age >= this.growthAge) {
             return this.isGrowth = true;
@@ -84,9 +69,7 @@ export default class Plant extends LiveNature{
 
     live() {
         super.live();
-        if (this.isDamaged) {
-            this.age = -1;
-        }
+
         this.view();
         if (this.isAlive === true) {
             this.getFruitSize();
