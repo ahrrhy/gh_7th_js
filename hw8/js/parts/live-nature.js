@@ -21,9 +21,10 @@ export default class LiveNature {
 
     isBitten(damage) {
         this.health -= damage;
+        this.damaged();
         if (this.health <= 0) {
             this.wasEaten = true;
-            return this.isAlive = false;
+            this.isDead();
         }
     }
 
@@ -34,7 +35,7 @@ export default class LiveNature {
         if (this.isDamaged) {
             this.age = -1;
         }
-        else this.isDead();
+        //else this.isDead();
     }
 
     view() {
