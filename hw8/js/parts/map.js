@@ -71,8 +71,7 @@ export default class Map {
                 let mapItemProto = this.getItemConstructorName(mapItem);
 
                 if (mapItemProto === 'Animal') {
-                    console.log(mapItem.Position);
-                    mapItem.see(map, mapItem.Position);
+                    mapItem.see(map, mapItem);
                 }
 
                 if (mapItemProto === 'Plant') {

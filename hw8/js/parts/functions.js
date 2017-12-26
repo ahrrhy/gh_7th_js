@@ -3,6 +3,7 @@ function randomInteger(min, max) {
     rand = Math.round(rand);
     return rand;
 }
+
 function getRandomOne() {
     return Math.random() < 0.5 ? -1 : 1;
 }
@@ -12,9 +13,14 @@ function getClosestEmpty(matrix, coordinates) {
         Y = coordinates[0],
         map = matrix,
         changeX = getRandomOne(),
-        changeY = getRandomOne();
-    if (changeX === undefined) {
+        changeY = getRandomOne(),
+        checkX = changeX < 0 || matrix.xSize,
+        checkY = changeY < 0 || matrix.ySize;
+    if (!checkX && !checkY) {
         changeX = getRandomOne();
+    }
+    if (!checkX && !checkY) {
+        changeY = getRandomOne();
     }
     if (map[Y+changeY][X+changeX] === 'empty') {
         return [Y+changeY, X+changeX];

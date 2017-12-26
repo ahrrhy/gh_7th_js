@@ -27,10 +27,10 @@ export default class Animal extends LiveNature {
         }
     }
 
-    see(matrix) {
+    see(matrix, animal) {
         let X = this.Position[1],
             Y = this.Position[0],
-            leftUp = matrix[Y-1][X-1],
+            leftUp = matrix[Y-1][ X-1],
             up = matrix[Y-1][X],
             upRight = matrix[Y-1][X+1],
             right = matrix[Y][X+1],
@@ -38,8 +38,9 @@ export default class Animal extends LiveNature {
             down = matrix[Y+1][X],
             downLeft = matrix[Y+1][X-1],
             left = matrix[Y][X-1],
-            itemConstructor;
-        let closestElements = [leftUp, up, upRight, right, downRight, down, downLeft, left];
+            itemConstructor,
+            closestElements = [leftUp, up, upRight, right, downRight, down, downLeft, left];
+        console.log(closestElements);
         let checkAllEmpty = closestElements.every((item) => {
             if (item !== undefined) {
                 itemConstructor = item.constructor.name;
@@ -67,23 +68,29 @@ export default class Animal extends LiveNature {
         if (this.satiety < this._fullSatiety) {
             this.eat(food);
         }
-        // else if (checkAllEmpty) {
-        //     this.move();
-        // }
+        else if (checkAllEmpty) {
+            this.move(matrix, animal);
+        }
     }
+
     eat(food) {
-
+        console.log(food);
     }
 
-    // move(matrix) {
-    //     let currentPos = this.Position;
-    //     let nextPos = getClosestEmpty(matrix, currentPos);
-    //     let nextPosY = nextPos[0],
-    //         nextPosX = nextPos[1],
-    //         currentPosX = currentPos[1],
-    //         currentPosY = currentPos[0];
-    //     matrix[nextPosY][nextPosX] = this;
-    //     matrix[currentPosY][currentPosX] = empty;
-    //     return matrix;
-    // }
+    move(matrix, animal) {
+        let currentPos = this.Position;
+        let nextPos = getClosestEmpty(matrix, currentPos);
+        let nextPosY = nextPos[0],
+            nextPosX = nextPos[1],
+            currentPosX = currentPos[1],
+            currentPosY = currentPos[0];
+        matrix[nextPosY][nextPosX] = animal;
+        animal.Position = [nextPosY, nextPosX];
+        matrix[currentPosY][currentPosX] = 'empty';
+        return matrix;
+    }
+
+    live() {
+        super.live();
+    }
 }
