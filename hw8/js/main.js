@@ -16,7 +16,7 @@ matrix.mapGenerate();
 // creating new instances of plants
 matrix.mapAddDecorations(Plant, treeParams, matrix.startTreesQuantity);
 matrix.mapAddDecorations(Plant, bushParams, matrix.startBushQuantity);
-matrix.mapAddDecorations(Animal, deerParams, 1);
+//matrix.mapAddDecorations(Animal, deerParams, 1);
 
 let div = document.createElement('div');
 div.setAttribute('class', 'container');

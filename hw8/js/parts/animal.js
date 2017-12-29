@@ -40,7 +40,6 @@ export default class Animal extends LiveNature {
             left = matrix[Y][X-1],
             itemConstructor,
             closestElements = [leftUp, up, upRight, right, downRight, down, downLeft, left];
-        console.log(closestElements);
         let checkAllEmpty = closestElements.every((item) => {
             if (item !== undefined) {
                 itemConstructor = item.constructor.name;
@@ -52,20 +51,21 @@ export default class Animal extends LiveNature {
         });
 
         let food = closestElements.find((item) => {
-            let food;
             if (item !== undefined) {
                 itemConstructor = item.constructor.name;
-                for (let i =0; i < this.food.length; i++) {
-                    if (itemConstructor === this.food[i]) {
-                        console.log(item);
-                        food = item;
+                let foodItem = this.food.find((foodElement) => {
+                    if (itemConstructor === foodElement) {
+                        return true;
                     }
+                });
+                if (foodItem) {
+                    return item;
                 }
             }
-            return food === item;
         });
         // it is the ending of method see();
-        if (this.satiety < this._fullSatiety) {
+        let seenFood = food !== undefined;
+        if (this.satiety < this._fullSatiety && seenFood) {
             this.eat(food);
         }
         else if (checkAllEmpty) {
@@ -74,23 +74,34 @@ export default class Animal extends LiveNature {
     }
 
     eat(food) {
-        console.log(food);
+        food.isBitten(food._fullHealth/food.size);
+        food.damaged();
+        console.log(food.health);
     }
 
     move(matrix, animal) {
         let currentPos = this.Position;
         let nextPos = getClosestEmpty(matrix, currentPos);
+        let nextPosYCheck;
         let nextPosY = nextPos[0],
             nextPosX = nextPos[1],
             currentPosX = currentPos[1],
             currentPosY = currentPos[0];
         matrix[nextPosY][nextPosX] = animal;
-        animal.Position = [nextPosY, nextPosX];
+        this.Position[0] = nextPosY;
+        this.Position[1] = nextPosX;
+        console.log(this.Position);
         matrix[currentPosY][currentPosX] = 'empty';
         return matrix;
     }
 
-    live() {
+    live(matrix, animal) {
         super.live();
+        if (this.isAlive) {
+            this.starvation();
+            this.see(matrix, animal);
+        }
     }
+
+
 }

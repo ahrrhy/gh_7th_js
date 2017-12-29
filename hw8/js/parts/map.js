@@ -71,7 +71,7 @@ export default class Map {
                 let mapItemProto = this.getItemConstructorName(mapItem);
 
                 if (mapItemProto === 'Animal') {
-                    mapItem.see(map, mapItem);
+                    mapItem.live(map, mapItem);
                 }
 
                 if (mapItemProto === 'Plant') {
@@ -94,7 +94,6 @@ export default class Map {
                 }
                 if (mapItemProto === 'Fruit') {
                     mapItem.live();
-                    console.log(mapItem.age);
                     if (mapItem.makePlant) {
                         let newPlant = this.mapElementNewInstance(mapItem.plant, mapItem.childParams);
                         newPlant.Position = mapItem.Position;

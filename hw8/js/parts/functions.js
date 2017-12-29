@@ -14,16 +14,16 @@ function getClosestEmpty(matrix, coordinates) {
         map = matrix,
         changeX = getRandomOne(),
         changeY = getRandomOne(),
-        checkX = changeX < 0 || matrix.xSize,
-        checkY = changeY < 0 || matrix.ySize;
-    if (!checkX && !checkY) {
+        newX = X+changeX,
+        newY = Y+changeY;
+    if (newX < 0 || newX > matrix.xSize-1) {
         changeX = getRandomOne();
     }
-    if (!checkX && !checkY) {
+    if (newY < 0 || newY > matrix.ySize-1) {
         changeY = getRandomOne();
     }
-    if (map[Y+changeY][X+changeX] === 'empty') {
-        return [Y+changeY, X+changeX];
+    if (map[newY][newX] === 'empty') {
+        return [newY, newX];
     }
     return getClosestEmpty(matrix, [Y,X]);
 }
