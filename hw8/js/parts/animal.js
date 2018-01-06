@@ -104,7 +104,9 @@ export default class Animal extends LiveNature {
         }
     }
 
-    displayStatus() {
-
+    showSatiety() {
+        if (this._isAlive) {
+            return this.satiety;
+        }
     }
 }

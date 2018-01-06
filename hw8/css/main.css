@@ -6,6 +6,12 @@ p {
     margin: 0;
     padding: 0;
 }
+.progress-health {
+    background-color: #ff0000;
+}
+.progress-satiety {
+    background-color: #0000ff;
+}
 .container {
     border-radius: 6px;
     background: #5a5a5a;
@@ -26,26 +32,26 @@ li {
 }
 .fruit {
     color: coral;
-    background: url("fruits.svg");
+    background: url("svg/fruits.svg");
     /*font-size: 10px;*/
 }
 
 .deer {
     color: #aaddf0;
-    background: url("zoo.svg");
+    background: url("svg/zoo.svg");
     /*font-size: 20px;*/
 
 }
 .spring {
-    background: url("spring.svg");
+    background: url("svg/spring.svg");
 }
 .bush {
     color: #00a500;
-    background: url("plant.svg");
+    background: url("svg/plant.svg");
     /*font-size: 20px;*/
 }
 .tree {
     color: #daad00;
-    background: url("tree.svg");
+    background: url("svg/tree.svg");
     /*font-size: 25px;*/
 }

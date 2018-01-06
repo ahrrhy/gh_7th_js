@@ -116,14 +116,24 @@ export default class Map {
         for (let mapElem of map) {
             output += `<ul>`;
             for (let mapElemDepth of mapElem) {
-                let className;
-                if (mapElemDepth === this.empty) {
+                let className,
+                    satiety ='',
+                    health = '',
+                    isEmpty = mapElemDepth === this.empty,
+                    notEmpty = mapElemDepth !== this.empty;
+                if (isEmpty) {
                     className = `${this.empty}`;
                 }
-                if (mapElemDepth !== this.empty) {
+                if (notEmpty) {
                     className = `${mapElemDepth.view()}`;
+                    if (mapElemDepth.satiety) {
+                        satiety = `<progress class="progress-satiety" value="${mapElemDepth.showSatiety()}" max="${mapElemDepth._fullSatiety}"></progress>`
+                    }
+                    if (mapElemDepth.health) {
+                        health = `<progress class="progress-health" value="${mapElemDepth.showHealth()}" max="${mapElemDepth._fullHealth}"></progress>`
+                    }
                 }
-                output += `<li class = "${className}"></li>`;
+                output += `<li class = "${className}">${satiety}${health}</li>`;
             }
             output += `</ul>`;
         }

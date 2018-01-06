@@ -38,6 +38,12 @@ export default class LiveNature {
         //else this.isDead();
     }
 
+    showHealth() {
+        if (this.isAlive) {
+            return this.health;
+        }
+    }
+
     view() {
         if (this.isAlive) {
             return this.cssClass;
