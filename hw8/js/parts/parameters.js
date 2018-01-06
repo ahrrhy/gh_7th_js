@@ -1,7 +1,7 @@
 // map parameters fo class Map constructor
 let fruitParams = {
     timeToLive : 4,
-    cssClass : 'flaticon-nature',
+    cssClass : 'fruit',
     size : 0,
     _fullHealth : 100,
     health : 100
@@ -12,9 +12,9 @@ let treeParams = {
     growthAge : 2,
     makeFruitPeriod : 4,
     // classes for different types of plants
-    treeClass : 'flaticon-tree-shape-of-thin-trunk-with-small-leaves-circles-outlines',
-    bushClass : 'flaticon-big-plant-like-a-small-tree',
-    springClass: 'flaticon-tree-trunk-growing-from-soil',
+    treeClass : 'tree',
+    bushClass : 'bush',
+    springClass: 'spring',
     fruitParams : fruitParams,
     health : 100
 };
@@ -22,9 +22,9 @@ let bushParams = {
     size : 2,
     growthAge : 2,
     makeFruitPeriod : 4,
-    treeClass : 'flaticon-tree-shape-of-thin-trunk-with-small-leaves-circles-outlines',
-    bushClass : 'flaticon-big-plant-like-a-small-tree',
-    springClass: 'flaticon-tree-trunk-growing-from-soil',
+    treeClass : 'tree',
+    bushClass : 'bush',
+    springClass: 'spring',
     fruitParams : fruitParams,
     health : 100
 };
@@ -33,21 +33,21 @@ let mapElements = {
     xSize : 30,
     ySize : 30,
     empty : 'empty',
-    startTreesQuantity: 6,
-    startBushQuantity: 6,
+    startTreesQuantity: 4,
+    startBushQuantity: 4,
 };
 
 let deerParams = {
     health : 100,
     satiety : 100,
-    cssClass : 'flaticon-animal',
+    cssClass : 'deer',
     food : ['Plant', 'Fruit']
 };
 
 let mouseParams = {
     health : 50,
     satiety : 50,
-    cssClass : 'flaticon-mouse',
+    cssClass : 'mouse',
     food : ['Fruit']
 };
 

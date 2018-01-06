@@ -1,29 +1,51 @@
-body{
+body {
     background: #a9a9a9;
     text-align: center;
 }
-p{
+p {
     margin: 0;
     padding: 0;
-    line-height: 1rem;
-    font-size: 1rem;
 }
-.container{
+.container {
     border-radius: 6px;
     background: #5a5a5a;
     display: inline-block;
 }
-span{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+span:before, span:after{
+    padding: 0;
+    margin: 0;
+    height: 35px;
 }
-.animal{
+li {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+.fruit {
+    color: coral;
+    background: url("fruits.svg");
+    /*font-size: 10px;*/
+}
+
+.deer {
     color: #aaddf0;
+    background: url("zoo.svg");
+    /*font-size: 20px;*/
+
+}
+.spring {
+    background: url("spring.svg");
 }
 .bush {
     color: #00a500;
-    background: #99D3FF;
-    padding-bottom: 2px;
-    border-radius: 2px;
+    background: url("plant.svg");
+    /*font-size: 20px;*/
+}
+.tree {
+    color: #daad00;
+    background: url("tree.svg");
+    /*font-size: 25px;*/
 }

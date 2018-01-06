@@ -62,8 +62,8 @@ export default class Plant extends LiveNature{
             return `${this.springClass}`;
         }
         if (isGrowth && isAlive){
-            if (type === 'bush') { return `${this.bushClass} bush`; }
-            if (type === 'tree') { return `${this.treeClass} tree`; }
+            if (type === 'bush') { return this.cssClass = 'bush'; }
+            if (type === 'tree') { return this.cssClass = 'tree'; }
         }
     }
 

@@ -70,7 +70,7 @@ export default class Map {
             for (let mapItem of item) {
                 let mapItemProto = this.getItemConstructorName(mapItem);
 
-                if (mapItemProto === 'Animal') {
+                if (mapItemProto === 'Deer') {
                     mapItem.live(map, mapItem);
                 }
 
@@ -80,8 +80,10 @@ export default class Map {
                         posY = mapItem.Position[0],
                         closestEmpty;
 
-                    closestEmpty = getClosestEmpty(this.map, [posY, posX]);
+
                     if (mapItem.timeToFruit()) {
+                        closestEmpty = getClosestEmpty(this.map, [posY, posX]);
+                        console.log(closestEmpty);
                         mapItem.getFruitSize();
                         fruit = this.mapElementNewInstance(mapItem.fruit, mapItem.fruitParams);
 
@@ -112,7 +114,7 @@ export default class Map {
         let map = this.map,
             output = ``;
         for (let mapElem of map) {
-            output += `<p>`;
+            output += `<ul>`;
             for (let mapElemDepth of mapElem) {
                 let className;
                 if (mapElemDepth === this.empty) {
@@ -121,9 +123,9 @@ export default class Map {
                 if (mapElemDepth !== this.empty) {
                     className = `${mapElemDepth.view()}`;
                 }
-                output += `<span class = "${className}"></span>`;
+                output += `<li class = "${className}"></li>`;
             }
-            output += `</p>`;
+            output += `</ul>`;
         }
         htmlNode.innerHTML = output;
     }

@@ -8,7 +8,7 @@ import {mapElements, treeParams, bushParams, deerParams, mouseParams} from "./pa
 import Map from "./parts/map.js";
 import Plant from "./parts/plants.js";
 import Fruit from "./parts/fruit.js";
-import Animal from "./parts/animal.js";
+import Deer from "./parts/deer.js";
 
 let matrix = new Map(mapElements);
 
@@ -16,7 +16,7 @@ matrix.mapGenerate();
 // creating new instances of plants
 matrix.mapAddDecorations(Plant, treeParams, matrix.startTreesQuantity);
 matrix.mapAddDecorations(Plant, bushParams, matrix.startBushQuantity);
-//matrix.mapAddDecorations(Animal, deerParams, 1);
+matrix.mapAddDecorations(Deer, deerParams, 1);
 
 let div = document.createElement('div');
 div.setAttribute('class', 'container');

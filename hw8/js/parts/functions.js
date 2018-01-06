@@ -18,14 +18,17 @@ function getClosestEmpty(matrix, coordinates) {
         newY = Y+changeY;
     if (newX < 0 || newX > matrix.xSize-1) {
         changeX = getRandomOne();
+        newX = X + changeX;
     }
     if (newY < 0 || newY > matrix.ySize-1) {
         changeY = getRandomOne();
+        newY = Y + changeY;
     }
     if (map[newY][newX] === 'empty') {
         return [newY, newX];
     }
-    return getClosestEmpty(matrix, [Y,X]);
+    //return getClosestEmpty(matrix, [Y,X]);
 }
+
 
 export {randomInteger, getClosestEmpty, getRandomOne};

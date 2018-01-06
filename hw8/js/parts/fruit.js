@@ -36,7 +36,7 @@ export default class Fruit extends LiveNature {
     view() {
         super.view();
         if (this.isAlive === true && this.timeToLive > 0) {
-            return `${this.cssClass} fruit`;
+            return `${this.cssClass}`;
         }
     }
 }

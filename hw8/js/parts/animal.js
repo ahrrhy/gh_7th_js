@@ -74,7 +74,8 @@ export default class Animal extends LiveNature {
     }
 
     eat(food) {
-        food.isBitten(food._fullHealth/food.size);
+        let damage = food._fullHealth/food.size;
+        food.isBitten(damage);
         food.damaged();
         console.log(food.health);
     }
@@ -103,5 +104,7 @@ export default class Animal extends LiveNature {
         }
     }
 
+    displayStatus() {
 
+    }
 }
