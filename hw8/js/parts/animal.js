@@ -6,7 +6,7 @@ export default class Animal extends LiveNature {
         super(parameters);
         this.satiety = parameters.satiety;
         this._fullSatiety = parameters.satiety;
-        this.satietyDecrease = this.satiety/100;
+        this.satietyDecrease = parameters.satietyDecrease;
         this.food = parameters.food;
     }
 
@@ -105,7 +105,7 @@ export default class Animal extends LiveNature {
     }
 
     showSatiety() {
-        if (this._isAlive) {
+        if (this.isAlive) {
             return this.satiety;
         }
     }

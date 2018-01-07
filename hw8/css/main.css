@@ -6,11 +6,11 @@ p {
     margin: 0;
     padding: 0;
 }
-.progress-health {
+progress.progress-health:not([value]) {
     background-color: #ff0000;
 }
-.progress-satiety {
-    background-color: #0000ff;
+progress.progress-satiety:not([value]) {
+    background-color: #00ff00;
 }
 .container {
     border-radius: 6px;
@@ -37,7 +37,6 @@ li {
 }
 
 .deer {
-    color: #aaddf0;
     background: url("svg/zoo.svg");
     /*font-size: 20px;*/
 

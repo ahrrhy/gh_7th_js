@@ -41,7 +41,8 @@ let deerParams = {
     health : 100,
     satiety : 100,
     cssClass : 'deer',
-    food : ['Plant', 'Fruit']
+    food : ['Plant', 'Fruit'],
+    satietyDecrease : 100*10/100
 };
 
 let mouseParams = {

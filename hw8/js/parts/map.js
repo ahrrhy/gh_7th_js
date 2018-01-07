@@ -72,6 +72,7 @@ export default class Map {
 
                 if (mapItemProto === 'Deer') {
                     mapItem.live(map, mapItem);
+                    console.log(mapItem.satiety);
                 }
 
                 if (mapItemProto === 'Plant') {
@@ -133,7 +134,7 @@ export default class Map {
                         health = `<progress class="progress-health" value="${mapElemDepth.showHealth()}" max="${mapElemDepth._fullHealth}"></progress>`
                     }
                 }
-                output += `<li class = "${className}">${satiety}${health}</li>`;
+                output += `<li class = "${className}"><span>${satiety}</span><span>${health}</span></li>`;
             }
             output += `</ul>`;
         }
