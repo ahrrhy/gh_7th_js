@@ -6,11 +6,33 @@ p {
     margin: 0;
     padding: 0;
 }
-progress.progress-health:not([value]) {
-    background-color: #ff0000;
+progress {
+    background: yellow;
+    /*display: inline-block;*/
+    color: #00a500;
+    width: 30px;
+    height: 4px;
 }
-progress.progress-satiety:not([value]) {
-    background-color: #00ff00;
+progress::-webkit-progress-bar {
+    background: black;
+    /*display: inline-block;*/
+    color: #00a500;
+    width: 30px;
+    height: 4px;
+}
+progress::-webkit-progress-value {
+    background: yellow;
+    /*display: inline-block;*/
+    color: #00a500;
+    width: 30px;
+    height: 4px;
+}
+progress::-moz-progress-bar {
+    background: yellow;
+    /*display: inline-block;*/
+    color: #00a500;
+    width: 30px;
+    height: 4px;
 }
 .container {
     border-radius: 6px;
