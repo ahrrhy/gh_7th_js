@@ -1,2 +1,0 @@
-https://stackoverflow.com/questions/18368202/how-to-set-color-for-css3-html5-progress-element
-https://css-tricks.com/html5-progress-element/

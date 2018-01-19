@@ -1,0 +1,41 @@
+span.data-input-wrap {
+    font-size: 16px;
+    line-height: 16px;
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+input[type=radio].data-input{
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+}
+
+input[type=radio].data-input:checked ~ .data-input-inside{
+    background: #000;
+}
+
+.data-input-inside {
+    line-height: 16px;
+    font-size: 16px;
+    display: inline-block;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    border-width: 0;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(50%, 50%);
+    -moz-transform: translate(50%, 50%);
+    -ms-transform: translate(50%, 50%);
+    -o-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
+}
