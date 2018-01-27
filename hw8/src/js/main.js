@@ -1,6 +1,4 @@
-// importing functions
-import {randomInteger, getClosestEmpty} from "./parts/functions.js";
-
+import '../css/main.css';
 // importing parameters
 import {mapElements, treeParams, bushParams, deerParams, mouseParams} from "./parts/parameters.js";
 

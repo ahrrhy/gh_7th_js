@@ -1,0 +1,70 @@
+body {
+    background: #a9a9a9;
+    text-align: center;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+progress {
+    background: yellow;
+    color: #00a500;
+    width: 30px;
+    height: 4px;
+}
+progress::-webkit-progress-bar {
+    background: black;
+    color: #00a500;
+    width: 30px;
+    height: 4px;
+}
+progress::-webkit-progress-value {
+    background: yellow;
+    color: #00a500;
+    width: 30px;
+    height: 4px;
+}
+progress::-moz-progress-bar {
+    background: yellow;
+    color: #00a500;
+    width: 30px;
+    height: 4px;
+}
+.container {
+    border-radius: 6px;
+    background: #5a5a5a;
+    display: inline-block;
+}
+span:before, span:after{
+    padding: 0;
+    margin: 0;
+    height: 35px;
+}
+li {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+.fruit {
+    color: coral;
+    background: url("svg/fruits.svg");
+}
+
+.deer {
+    background: url("svg/zoo.svg");
+
+}
+.spring {
+    background: url("svg/spring.svg");
+}
+.bush {
+    color: #00a500;
+    background: url("svg/plant.svg");
+}
+.tree {
+    color: #daad00;
+    background: url("svg/tree.svg");
+}

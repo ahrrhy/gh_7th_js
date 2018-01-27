@@ -8,28 +8,24 @@ p {
 }
 progress {
     background: yellow;
-    /*display: inline-block;*/
     color: #00a500;
     width: 30px;
     height: 4px;
 }
 progress::-webkit-progress-bar {
     background: black;
-    /*display: inline-block;*/
     color: #00a500;
     width: 30px;
     height: 4px;
 }
 progress::-webkit-progress-value {
     background: yellow;
-    /*display: inline-block;*/
     color: #00a500;
     width: 30px;
     height: 4px;
 }
 progress::-moz-progress-bar {
     background: yellow;
-    /*display: inline-block;*/
     color: #00a500;
     width: 30px;
     height: 4px;
@@ -54,25 +50,21 @@ li {
 }
 .fruit {
     color: coral;
-    background: url("svg/fruits.svg");
-    /*font-size: 10px;*/
+    background: url(fruits.svg);
 }
 
 .deer {
-    background: url("svg/zoo.svg");
-    /*font-size: 20px;*/
+    background: url(zoo.svg);
 
 }
 .spring {
-    background: url("svg/spring.svg");
+    background: url(spring.svg);
 }
 .bush {
     color: #00a500;
-    background: url("svg/plant.svg");
-    /*font-size: 20px;*/
+    background: url(plant.svg);
 }
 .tree {
     color: #daad00;
-    background: url("svg/tree.svg");
-    /*font-size: 25px;*/
+    background: url(tree.svg);
 }
