@@ -13,7 +13,6 @@ export const getTickets = (action) => {
                         tickets.map((ticket) => {
                             fetchedTickets.push(ticket);
                         });
-                        console.log(tickets);
                         dispatch({ type: 'FETCH_TICKETS_SUCCESS', payload: fetchedTickets })
                     });
 

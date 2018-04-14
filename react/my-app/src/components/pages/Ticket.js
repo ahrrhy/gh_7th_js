@@ -13,6 +13,10 @@ class Ticket extends Component {
     constructor(props) {
         super(props);
         this.myTicket = {};
+        this.edited = {
+            name: '',
+            description: ''
+        }
     }
 
     componentWillMount() {
@@ -22,6 +26,7 @@ class Ticket extends Component {
     componentDidMount() {
         this.ticket();
     }
+
     ticket() {
         this.ticketData = this.props.tickets.find((ticket) => {
             return ticket._id === this.props.match.params._id;
@@ -30,17 +35,12 @@ class Ticket extends Component {
     }
 
     render() {
-
         return (
             <div>
                 <Menu/>
-
                 <div className="container">
                     <div className="row">
                         <div className="col s12">
-                            <div className="col s6">
-                                <EditTicketForm/>
-                            </div>
                             <div className="col s6">
                                 <div className="ticketElem">
                                     { this.myTicket !== undefined ?
@@ -56,7 +56,9 @@ class Ticket extends Component {
                                     }
                                 </div>
                             </div>
-
+                            <div className="col s6">
+                                <EditTicketForm ticket={this.props.ticket} updateTicket={this.updateTicket} />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -66,7 +68,11 @@ class Ticket extends Component {
 }
 export default connect(
     (state, ownProps) => ({
-        tickets: state.tickets
+        tickets: state.tickets,
+        ownProps,
+        ticket: state.tickets.find((ticket) => {
+            return ticket._id === ownProps.match.params._id;
+        })
     }),
     dispatch => ({
         onGetTickets: () => {

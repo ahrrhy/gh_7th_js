@@ -10,7 +10,6 @@ let action = '/fetch';
 class App extends Component {
 
     componentDidMount() {
-        console.log(this.props);
         this.props.onGetTickets();
     }
 
@@ -19,14 +18,7 @@ class App extends Component {
             <div>
                 <Menu/>
                 <div  className="row">
-                    <div className="col s6">
-                        <div className="row">
-                            <div className="input-field col s12">
-                                <button className="waves-effect waves-light btn">Get ticket</button>
-                            </div>
-                        </div>
-                    </div>
-                    <ul className="col s6">
+                    <ul className="col s12">
                         <TicketElement/>
                     </ul>
                 </div>

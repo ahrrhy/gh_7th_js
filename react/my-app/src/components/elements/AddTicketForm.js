@@ -7,7 +7,8 @@ class AddTicketForm extends Component {
         let ticket = {
             name: this.ticketNameInput.value,
             description: this.ticketDescriptionInput.value,
-            favorite: false
+            favorite: false,
+            done: false
         };
         this.props.onAddTicket(ticket);
         this.ticketNameInput.value = '';
@@ -57,7 +58,6 @@ export default connect(
                         })
                         .then((response) => {
                             if(response.status == 200){
-                                console.log(ticket + 3443);
                                 dispatch({ type: 'ADD_TICKET', payload: ticket });
                             } else {
                                 dispatch({ type: 'TICKET_ERROR', payload: "addTICKET error" })

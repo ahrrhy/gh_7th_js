@@ -16,14 +16,16 @@ let action = '/fetch';
 class TicketElement extends Component {
 
     deleteTicket(target) {
-        console.log(target);
         this.props.onDeleteTicket(target);
         this.props.onGetData();
     }
 
     toggleFavorite(target) {
-        console.log(target);
         this.props.onToggleFavorite(target);
+    }
+
+    toggleDone(target) {
+        this.props.onToggleDone(target);
     }
 
     render() {
@@ -44,6 +46,12 @@ class TicketElement extends Component {
                                     <span onClick={ this.toggleFavorite.bind(this, ticket) }><i className="material-icons">favorite</i></span>
                                     :
                                     <span onClick={ this.toggleFavorite.bind(this, ticket) }><i className="material-icons red-text">favorite</i></span>
+
+                                }
+                                { ticket.done === false ?
+                                    <span onClick={ this.toggleDone.bind(this, ticket) }><i className="material-icons">check</i></span>
+                                    :
+                                    <span onClick={ this.toggleDone.bind(this, ticket) }><i className="material-icons red-text">check</i></span>
 
                                 }
                                 <span  onClick={ this.deleteTicket.bind(this, ticket)}><i className="material-icons">delete</i></span>
@@ -84,6 +92,29 @@ export default connect(
               }
             };
             dispatch(toggleFavorite());
+        },
+        onToggleDone: (ticket) => {
+            const toggleDone = () => {
+                return dispatch => {
+                    return fetch('/done', {
+                        method: "POST",
+                        body: JSON.stringify({ticket: ticket}),
+                        headers: {'Content-Type': 'application/json'}
+                    }).then((response) => {
+                        if (response.status == 200) {
+                            if (ticket.done === false) {
+                                ticket.done = true;
+                            } else {
+                                ticket.done = false;
+                            }
+                            dispatch({ type: 'TOGGLE_DONE', payload: ticket });
+                        } else {
+                            dispatch({ type: 'TICKET_ERROR', payload: "addTICKET error" })
+                        }
+                    });
+                }
+            };
+            dispatch(toggleDone());
         },
         onDeleteTicket: (ticket) => {
             const deleteOneTicket = () => {

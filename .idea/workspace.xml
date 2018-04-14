@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9055ac9d-779e-4efc-83d4-bf8d08ee9241" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hw10/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hw10/text.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/react/my-app/db/journal/WiredTigerLog.0000000014" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/db/WiredTiger.wt" afterPath="$PROJECT_DIR$/react/my-app/db/WiredTiger.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/db/collection-0-2237249979573029142.wt" afterPath="$PROJECT_DIR$/react/my-app/db/collection-0-2237249979573029142.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/db/collection-2-2867088136229412576.wt" afterPath="$PROJECT_DIR$/react/my-app/db/collection-2-2867088136229412576.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/db/index-1-2237249979573029142.wt" afterPath="$PROJECT_DIR$/react/my-app/db/index-1-2237249979573029142.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/db/index-3-2867088136229412576.wt" afterPath="$PROJECT_DIR$/react/my-app/db/index-3-2867088136229412576.wt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/db/mongod.lock" afterPath="$PROJECT_DIR$/react/my-app/db/mongod.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/db/sizeStorer.wt" afterPath="$PROJECT_DIR$/react/my-app/db/sizeStorer.wt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/hw1/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw1/js/main.js" afterPath="$PROJECT_DIR$/hw1/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw8/webpack.config.js" afterPath="$PROJECT_DIR$/hw8/webpack.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/app.js" afterPath="$PROJECT_DIR$/react/my-app/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/db/WiredTiger.turtle" afterPath="$PROJECT_DIR$/react/my-app/db/WiredTiger.turtle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/src/actions/getTickets.js" afterPath="$PROJECT_DIR$/react/my-app/src/actions/getTickets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/src/components/elements/AddTicketForm.js" afterPath="$PROJECT_DIR$/react/my-app/src/components/elements/AddTicketForm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/src/components/elements/EditTicketForm.js" afterPath="$PROJECT_DIR$/react/my-app/src/components/elements/EditTicketForm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/src/components/elements/TicketElement.js" afterPath="$PROJECT_DIR$/react/my-app/src/components/elements/TicketElement.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/src/components/pages/App.js" afterPath="$PROJECT_DIR$/react/my-app/src/components/pages/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/src/components/pages/Ticket.js" afterPath="$PROJECT_DIR$/react/my-app/src/components/pages/Ticket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/react/my-app/src/reducers/tickets.js" afterPath="$PROJECT_DIR$/react/my-app/src/reducers/tickets.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,24 +33,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Ticket.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/start-react/my-app/src/components/pages/Ticket.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="41" column="49" lean-forward="true" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="AddTicketForm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/start-react/my-app/src/components/elements/AddTicketForm.js">
+        <entry file="file://$PROJECT_DIR$/react/my-app/src/components/elements/AddTicketForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="921">
-              <caret line="70" column="17" lean-forward="true" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+            <state relative-caret-position="89">
+              <caret line="59" column="55" lean-forward="false" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -47,42 +47,68 @@
         </entry>
       </file>
       <file leaf-file-name="EditTicketForm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/start-react/my-app/src/components/elements/EditTicketForm.js">
+        <entry file="file://$PROJECT_DIR$/react/my-app/src/components/elements/EditTicketForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/start-react/my-app/src/components/pages/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-744">
+              <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding>
-                <marker date="1522942803951" expanded="true" signature="7:226" ph="..." />
-                <marker date="1522942803951" expanded="true" signature="280:1019" ph="{...}" />
-                <marker date="1522942803951" expanded="true" signature="307:382" ph="{...}" />
-                <marker date="1522942803951" expanded="true" signature="397:1017" ph="{...}" />
-                <marker date="1522942803951" expanded="true" signature="1071:1127" ph="{&quot;tickets&quot;: state.tickets...}" />
-                <marker date="1522942803951" expanded="true" signature="1147:1236" ph="{...}" />
-                <marker date="1522942803951" expanded="true" signature="1177:1230" ph="{...}" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateTicket.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/start-react/my-app/src/components/pages/CreateTicket.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/my-app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="191">
+              <caret line="153" column="53" lean-forward="false" selection-start-line="153" selection-start-column="53" selection-end-line="153" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tickets.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/my-app/src/reducers/tickets.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="45" column="47" lean-forward="false" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ticket.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/my-app/src/components/pages/Ticket.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-710">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
-                <marker date="1521654038704" expanded="true" signature="7:134" ph="..." />
-                <marker date="1521654038704" expanded="true" signature="173:461" ph="{...}" />
-                <marker date="1521654038704" expanded="true" signature="188:459" ph="{...}" />
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TicketElement.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react/my-app/src/components/elements/TicketElement.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1662">
+              <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/react/my-app/src/components/pages/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-217">
+              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,6 +142,7 @@
       <find>matrixSize</find>
       <find>something</find>
       <find>getTheType</find>
+      <find>console</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,14 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hw5/js/main.js" />
-        <option value="$PROJECT_DIR$/hw5/js/some-interesting.js" />
-        <option value="$PROJECT_DIR$/hw5/js/object-animal.js" />
-        <option value="$PROJECT_DIR$/hw1/README.md" />
-        <option value="$PROJECT_DIR$/hw2/README.md" />
-        <option value="$PROJECT_DIR$/hw3/README.md" />
-        <option value="$PROJECT_DIR$/hw4/README.md" />
-        <option value="$PROJECT_DIR$/hw5/README.md" />
         <option value="$PROJECT_DIR$/hw6/README.md" />
         <option value="$PROJECT_DIR$/hw7/js/proxy.js" />
         <option value="$PROJECT_DIR$/hw7/js/iteration.js" />
@@ -175,6 +194,14 @@
         <option value="$PROJECT_DIR$/start-react/my-app/src/components/elements/EditTicket.js" />
         <option value="$PROJECT_DIR$/start-react/my-app/src/components/elements/EditTicketForm.js" />
         <option value="$PROJECT_DIR$/start-react/my-app/src/components/pages/Ticket.js" />
+        <option value="$PROJECT_DIR$/react/my-app/src/actions/getTickets.js" />
+        <option value="$PROJECT_DIR$/react/my-app/src/components/pages/Ticket.js" />
+        <option value="$PROJECT_DIR$/react/my-app/src/components/elements/EditTicketForm.js" />
+        <option value="$PROJECT_DIR$/react/my-app/app.js" />
+        <option value="$PROJECT_DIR$/react/my-app/src/components/elements/AddTicketForm.js" />
+        <option value="$PROJECT_DIR$/react/my-app/src/reducers/tickets.js" />
+        <option value="$PROJECT_DIR$/react/my-app/src/components/elements/TicketElement.js" />
+        <option value="$PROJECT_DIR$/react/my-app/src/components/pages/App.js" />
       </list>
     </option>
   </component>
@@ -190,9 +217,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/start-react/my-app/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
@@ -219,6 +243,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -230,25 +255,33 @@
             <path>
               <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="gh-js" type="462c0819:PsiDirectoryNode" />
-              <item name="start-react" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="gh-js" type="462c0819:PsiDirectoryNode" />
-              <item name="start-react" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="gh-js" type="462c0819:PsiDirectoryNode" />
-              <item name="start-react" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="gh-js" type="462c0819:PsiDirectoryNode" />
-              <item name="start-react" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gh-js" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
@@ -256,7 +289,7 @@
             <path>
               <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="gh-js" type="462c0819:PsiDirectoryNode" />
-              <item name="start-react" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
@@ -265,17 +298,24 @@
             <path>
               <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="gh-js" type="462c0819:PsiDirectoryNode" />
-              <item name="start-react" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="gh-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gh-js" type="462c0819:PsiDirectoryNode" />
+              <item name="react" type="462c0819:PsiDirectoryNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -443,11 +483,12 @@
       <workItem from="1517679282130" duration="165000" />
       <workItem from="1523559394061" duration="186000" />
       <workItem from="1523561608127" duration="5130000" />
+      <workItem from="1523643971516" duration="20638000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="490624000" />
+    <option name="totallyTimeSpent" value="511262000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -463,11 +504,11 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1592262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5029762" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.50446427" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34539473" sideWeight="0.49702382" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2993421" sideWeight="0.4955357" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39967105" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -498,50 +539,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hw8/js/parts/plants-class.js" />
-    <entry file="file://$PROJECT_DIR$/hw5/js/object-animal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" column="44" lean-forward="false" selection-start-line="115" selection-start-column="44" selection-end-line="115" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw3/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw6/parts/aborigine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw6/parts/hunter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw6/parts/mouse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw6/parts/human.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hw8/font/flaticon.html" />
     <entry file="file://$PROJECT_DIR$/hw6/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -683,7 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
           <caret line="133" column="5" lean-forward="true" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -741,62 +736,119 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/start-react/my-app/src/components/pages/CreateTicket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="153">
           <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <marker date="1521654038704" expanded="true" signature="7:134" ph="..." />
-            <marker date="1521654038704" expanded="true" signature="173:461" ph="{...}" />
-            <marker date="1521654038704" expanded="true" signature="188:459" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/start-react/my-app/src/components/pages/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1522942803951" expanded="true" signature="7:226" ph="..." />
-            <marker date="1522942803951" expanded="true" signature="280:1019" ph="{...}" />
-            <marker date="1522942803951" expanded="true" signature="307:382" ph="{...}" />
-            <marker date="1522942803951" expanded="true" signature="397:1017" ph="{...}" />
-            <marker date="1522942803951" expanded="true" signature="1071:1127" ph="{&quot;tickets&quot;: state.tickets...}" />
-            <marker date="1522942803951" expanded="true" signature="1147:1236" ph="{...}" />
-            <marker date="1522942803951" expanded="true" signature="1177:1230" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/start-react/my-app/src/components/elements/EditTicketForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <caret line="6" column="34" lean-forward="false" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/start-react/my-app/src/components/elements/AddTicketForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="921">
-          <caret line="70" column="17" lean-forward="true" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+        <state relative-caret-position="1173">
+          <caret line="70" column="17" lean-forward="false" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start-react/my-app/src/components/pages/Ticket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="41" column="49" lean-forward="false" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/my-app/src/actions/getTickets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/my-app/src/components/elements/AddTicketForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="59" column="55" lean-forward="false" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start-react/my-app/src/components/pages/Ticket.js">
+    <entry file="file://$PROJECT_DIR$/react/my-app/src/components/elements/EditTicketForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="41" column="49" lean-forward="true" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
+        <state relative-caret-position="-744">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/my-app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="153" column="53" lean-forward="false" selection-start-line="153" selection-start-column="53" selection-end-line="153" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/my-app/src/reducers/tickets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="45" column="47" lean-forward="false" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/my-app/src/components/pages/Ticket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-710">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/my-app/src/components/elements/TicketElement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1662">
+          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react/my-app/src/components/pages/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-217">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
